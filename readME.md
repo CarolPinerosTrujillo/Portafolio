@@ -25,5 +25,6 @@ Java | Spring Boot | PostgreSQL | JavaScript | HTML | CSS | Git | GitHub | Power
 
 - LinkedIn
 - Portfolio (coming soon)
+- My design https://www.figma.com/design/TOMiRdpbUHgDdO5N1YU8NA/PORTAFOLIO?node-id=0-1&t=OFZnXTnXmer6BzPG-1
 
 Thanks for visiting my profile!
