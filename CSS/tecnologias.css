@@ -1,0 +1,139 @@
+/* ============ SECCIÓN TECNOLOGÍAS ============ */
+.tech-section{
+  position:relative;
+}
+
+.tech-title{
+  color:#f2f0fb;
+  text-transform:uppercase;
+  letter-spacing:.4em;
+  font-size:clamp(20px, 2.4vw, 28px);
+  font-weight:400;
+}
+
+/* Tarjeta glass morada */
+.tech-card{
+    max-width: 100%;
+  background:linear-gradient(135deg, rgba(139,92,246,.32) 0%, rgba(91,71,150,.55) 55%, rgba(58,45,92,.7) 100%);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:28px;
+  padding:clamp(18px, 2.5vw, 30px) clamp(24px, 4vw, 44px);
+  box-shadow:0 20px 50px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.tech-card-inner{
+  display:flex;
+  align-items:center;
+  gap:clamp(20px, 3vw, 40px);
+}
+.tech-card-inner--single{
+  gap:clamp(24px, 4vw, 48px);
+  justify-content:flex-start;
+}
+
+.tech-rows{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+
+.tech-row{
+  display:flex;
+  align-items:center;
+  gap:clamp(16px, 2.5vw, 30px);
+  padding:12px 0;
+}
+.tech-row + .tech-row{
+  border-top:1px solid rgba(255,255,255,.15);
+}
+
+.tech-label{
+  flex:0 0 auto;
+  width:110px;
+  text-align:left;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-size:clamp(11px, 1vw, 13px);
+  color:#e6e1f7;
+  font-weight:500;
+}
+
+.tech-icons{
+  display:flex;
+  align-items:center;
+  gap:clamp(16px, 3vw, 30px);
+  flex-wrap:wrap;
+}
+.tech-icons img{
+  height:clamp(28px, 3.2vw, 40px);
+  width:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,.25));
+  transition:transform .2s ease;
+}
+.tech-icons img:hover{ transform:translateY(-3px); }
+
+/* Power BI: pastilla blanca detrás del ícono, como el logo real */
+.tech-icon--pill{
+  background:#fff;
+  border-radius:14px;
+  padding:8px 14px;
+  height:clamp(40px, 4.2vw, 54px) !important;
+  box-shadow:0 6px 16px rgba(0,0,0,.25);
+}
+
+/* Divisor vertical entre el grupo de lenguajes y GitHub/Git */
+.tech-divider{
+  width:1px;
+  align-self:stretch;
+  background:rgba(255,255,255,.22);
+  flex:0 0 auto;
+}
+
+.tech-side-icons{
+  display:flex;
+  align-items:center;
+  gap:clamp(18px, 2.5vw, 32px);
+  flex:0 0 auto;
+}
+.tech-side-icons img{
+  height:clamp(30px, 3.4vw, 42px);
+  width:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,.25));
+  transition:transform .2s ease;
+}
+.tech-side-icons img:hover{ transform:translateY(-3px); }
+
+/* ---------- Responsive ---------- */
+@media (max-width:768px){
+  .tech-card-inner{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .tech-row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+  .tech-label{ width:auto; }
+  .tech-side-icons{
+    justify-content:center;
+    padding-top:16px;
+    margin-top:6px;
+    border-top:1px solid rgba(255,255,255,.15);
+  }
+  .tech-card-inner--single{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:16px;
+  }
+}
+
+@media (max-width:480px){
+  .tech-icons{ gap:16px; }
+  .tech-icons img{ height:30px; }
+}

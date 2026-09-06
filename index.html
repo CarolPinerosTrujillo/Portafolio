@@ -1,11 +1,458 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carol Piñeros - Full Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/nav-hero.css">
+    <link rel="stylesheet" href="CSS/tecnologias.css">
+    <link rel="stylesheet" href="CSS/proyectos.css">
+    <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
+
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background:rgba(5,11,31,.75); backdrop-filter:blur(8px);">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#inicio">Carol Piñeros</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="banner" id="inicio">
+  <div class="grid-overlay"></div>
+
+  <div class="banner-inner">
+
+    <!-- ===== MONITOR + ESCRITORIO EN SVG (una sola pieza) ===== -->
+    <div class="desk-scene">
+      <svg viewBox="0 0 640 460" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="metalGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#20263c"/>
+            <stop offset="1" stop-color="#10131f"/>
+          </linearGradient>
+          <linearGradient id="deskGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#181f38" stop-opacity=".95"/>
+            <stop offset=".7" stop-color="#080b16" stop-opacity=".35"/>
+            <stop offset="1" stop-color="#080b16" stop-opacity="0"/>
+          </linearGradient>
+          <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5"/>
+          </filter>
+          <clipPath id="screenClip">
+            <rect x="66" y="26" width="448" height="268" rx="4"/>
+          </clipPath>
+        </defs>
+
+        <!-- mesa -->
+        <rect x="-20" y="358" width="680" height="102" fill="url(#deskGrad)"/>
+
+        <!-- sombra de contacto del monitor -->
+        <ellipse cx="290" cy="372" rx="120" ry="10" fill="#000" opacity=".45" filter="url(#softBlur)"/>
+
+        <!-- planta -->
+        <g>
+          <path d="M16 380 C10 360 6 345 16 328" stroke="#3a6b52" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M18 380 C18 358 22 340 18 322" stroke="#3a6b52" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M20 380 C28 362 34 348 26 330" stroke="#3a6b52" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <rect x="0" y="380" width="36" height="30" rx="2" fill="#1b2440"/>
+        </g>
+
+        <!-- taza -->
+        <g>
+          <rect x="42" y="372" width="42" height="36" rx="6" fill="url(#metalGrad)" stroke="#262d48" stroke-width="2"/>
+          <path d="M84 380 q16 0 16 8 t-16 8" fill="none" stroke="#262d48" stroke-width="3"/>
+        </g>
+
+        <!-- monitor -->
+        <rect x="60" y="20" width="460" height="280" rx="10" fill="#0b0f1c" stroke="#161c30" stroke-width="8"/>
+
+        <g clip-path="url(#screenClip)">
+          <rect x="66" y="26" width="448" height="268" fill="#0e1424"/>
+          <rect x="66" y="26" width="140" height="268" fill="#0e1424"/>
+          <line x1="206" y1="26" x2="206" y2="294" stroke="#1c2440" stroke-width="1"/>
+
+          <!-- árbol de archivos -->
+          <text x="80" y="50" font-size="12" fill="#93a1d4">▸ src</text>
+          <text x="92" y="68" font-size="12" fill="#93a1d4">▸ api</text>
+          <text x="92" y="86" font-size="12" fill="#93a1d4">▸ services</text>
+          <text x="92" y="104" font-size="12" fill="#93a1d4">▸ models</text>
+          <text x="92" y="122" font-size="12" fill="#93a1d4">• App.java</text>
+          <text x="80" y="140" font-size="12" fill="#93a1d4">▸ test</text>
+          <text x="92" y="158" font-size="12" fill="#93a1d4">pom.xml</text>
+
+          <!-- código -->
+          <text x="220" y="50" font-size="12"><tspan fill="#6672a8">1  </tspan><tspan fill="#d3a8ff">@RestController</tspan></text>
+          <text x="220" y="70" font-size="12"><tspan fill="#6672a8">2  </tspan><tspan fill="#d3a8ff">public class</tspan><tspan fill="#8fe3ff"> EnergyController</tspan><tspan fill="#c3ccf2"> {</tspan></text>
+          <text x="220" y="90" font-size="12"><tspan fill="#6672a8">3  </tspan><tspan fill="#c3ccf2">  </tspan><tspan fill="#d3a8ff">@GetMapping</tspan><tspan fill="#c3ccf2">(</tspan><tspan fill="#ffd889">"/api/data"</tspan><tspan fill="#c3ccf2">)</tspan></text>
+          <text x="220" y="110" font-size="12"><tspan fill="#6672a8">4  </tspan><tspan fill="#c3ccf2">  </tspan><tspan fill="#d3a8ff">public</tspan><tspan fill="#8fe3ff"> List</tspan><tspan fill="#c3ccf2">&lt;Reading&gt; getData() {</tspan></text>
+          <text x="220" y="130" font-size="12"><tspan fill="#6672a8">5  </tspan><tspan fill="#7580ad">      // consume API JSON</tspan></text>
+          <text x="220" y="150" font-size="12"><tspan fill="#6672a8">6  </tspan><tspan fill="#c3ccf2">    </tspan><tspan fill="#d3a8ff">return</tspan><tspan fill="#c3ccf2"> repo.</tspan><tspan fill="#8fe3ff">findAll</tspan><tspan fill="#c3ccf2">();</tspan></text>
+          <text x="220" y="170" font-size="12"><tspan fill="#6672a8">7  </tspan><tspan fill="#c3ccf2">  }</tspan></text>
+          <text x="220" y="190" font-size="12"><tspan fill="#6672a8">8  </tspan><tspan fill="#c3ccf2">}</tspan><tspan class="cursor" fill="#5b8def">▌</tspan></text>
+        </g>
+        <rect x="60" y="20" width="460" height="280" rx="10" fill="none" stroke="#161c30" stroke-width="8"/>
+
+        <!-- brillo del monitor -->
+        <rect x="60" y="20" width="460" height="140" rx="10" fill="#ffffff" opacity=".03"/>
+
+        <!-- soporte y base -->
+        <rect x="283" y="300" width="14" height="46" fill="url(#metalGrad)"/>
+        <rect x="210" y="346" width="160" height="14" rx="6" fill="url(#metalGrad)"/>
+
+        <!-- teclado -->
+        <rect x="110" y="392" width="210" height="26" rx="5" fill="url(#metalGrad)" stroke="#262d48" stroke-width="1.5"/>
+        <!-- mouse -->
+        <rect x="344" y="396" width="24" height="36" rx="11" fill="url(#metalGrad)" stroke="#262d48" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <!-- ===== TEXTO ===== -->
+    <div class="content">
+      <div class="eyebrow">HOLA SOY</div>
+      <h1 class="name">Carol Piñeros</h1>
+      <div class="role">
+        <b>FULL STACK DEVELOPER JR</b><br>
+        JAVA&nbsp;|&nbsp;SPRINGBOOT
+      </div>
+      <p class="intro">
+        Ingeniera mecánica en transición hacia el desarrollo full stack. Construyo soluciones limpias y escalables con Java y Spring Boot, combinando pensamiento analítico con curiosidad por los datos y la eficiencia energética.
+      </p>
+      <div class="cta-group">
+        <a href="#contacto" class="btn-cta btn-primary-cta">Contáctame →</a>
+        <a href="#blog" class="btn-cta btn-outline-cta">Lee mi blog</a>
+        <a href="#proyectos" class="btn-cta btn-outline-cta">Conoce mis proyectos</a>
+      </div>
+    </div>
+
+    <!-- ===== FOTO ===== -->
+    <div class="photo-card" style="background-image:url('./assets/carol1.png');">
+      <div class="card-shine"></div>
     
+    </div>
+
+  </div>
+
+  <!-- ===== ENERGÍA EN SVG ===== -->
+   <div class="energy-scene">
+    <div class="diagonal-glow"></div>
+    <div class="turbine t1"><div class="pole"></div><div class="hub"></div><div class="blades"><div class="blade"></div><div class="blade"></div><div class="blade"></div></div></div>
+    <div class="turbine t2"><div class="pole"></div><div class="hub"></div><div class="blades"><div class="blade"></div><div class="blade"></div><div class="blade"></div></div></div>
+    <div class="turbine t3"><div class="pole"></div><div class="hub"></div><div class="blades"><div class="blade"></div><div class="blade"></div><div class="blade"></div></div></div>
+    <div class="solar">
+      <div class="panel p3"></div>
+      <div class="panel p2"></div>
+      <div class="panel p1"></div>
+    </div>
+  </div>
+
+</section>
+
+
+<section id="tecnologias" class="py-5 bg-section tech-section">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5 tech-title">Tecnologías</h2>
+
+        <!-- Tarjeta 1: Backend + Frontend + GitHub/Git -->
+        <div class="tech-card mb-4 mx-auto" >
+            <div class="tech-card-inner">
+
+                <div class="tech-rows">
+                    <div class="tech-row">
+                        <span class="tech-label">Backend</span>
+                        <div class="tech-icons">
+                            <img src="./assets/java.png" alt="Java" title="Java">
+                            <img src="./assets/spring.png" alt="Spring Boot" title="Spring Boot">
+                            <img src="./assets/intellij.png" alt="IntelliJ IDEA" title="IntelliJ IDEA">
+                            <img src="./assets/postgresql.png" alt="PostgreSQL" title="PostgreSQL">
+                        </div>
+                    </div>
+                    <div class="tech-row">
+                        <span class="tech-label">Frontend</span>
+                        <div class="tech-icons">
+                            <img src="./assets/javascript.png" alt="JavaScript" title="JavaScript">
+                            <img src="./assets/html5.png" alt="HTML5" title="HTML5">
+                            <img src="./assets/css-3.png" alt="CSS3" title="CSS3">
+                            <img src="./assets/bootstrap.png" alt="Bootstrap" title="Bootstrap">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-divider d-none d-md-block"></div>
+
+                <div class="tech-side-icons">
+                    <img src="./assets/github-logo.png" alt="GitHub" title="GitHub">
+                    <img src="./assets/git.svg" alt="Git" title="Git">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tarjeta 2: Data Analyst -->
+        <div class="tech-card mx-auto" style="max-width: 640px;">
+            <div class="tech-card-inner tech-card-inner--single">
+                <span class="tech-label">Data Analyst</span>
+                <div class="tech-icons">
+                    <img src="./assets/python.png" alt="Python" title="Python">
+                    <img src="./assets/powerbi.png" alt="Power BI" title="Power BI" class="tech-icon--pill">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+    <!-- Proyectos -->
+<!-- Proyectos -->
+<section id="proyectos" class="py-5 proj-section">
+    <div class="container">
+
+        <div class="proj-heading">
+            <div class="proj-eyebrow">PROYECTOS DESTACADOS</div>
+            <h2 class="proj-title">Algunos proyectos que he trabajado</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- AgendaPets -->
+            <div class="col-md-6 col-lg-4">
+                <article class="proj-card">
+                    <div class="proj-winbar">
+                        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                        <span class="proj-path">~/proyectos/agendapets</span>
+                    </div>
+
+                    <div class="proj-thumb proj-thumb--pets">
+                        <span class="proj-tag">WEB APP</span>
+                      <img src="./assets/agendapets.jpeg" alt="AgendaPets" class="proj-img" ">
+                    </div>
+
+                    <div class="proj-body">
+                        <h3 class="proj-name">AgendaPets</h3>
+                        <p class="proj-desc">Sitio web de gestión de reservas para peluquería canina. Permite gestionar citas, clientes, disponibilidad de horarios. Se usaron las herramientas Java, Springboot, PostgressSQL y JS. </p>
+                        <div class="proj-stack">
+                            <span class="chip">Java</span>
+                            <span class="chip">Spring Boot</span>
+                            <span class="chip">PostgreSQL</span>
+                            <span class="chip">JS</span>
+                        </div>
+                        <a href="#" class="proj-link">Ver proyecto <span class="arrow">→</span></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Huerta Hayuelos -->
+            <div class="col-md-6 col-lg-4">
+                <article class="proj-card">
+                    <div class="proj-winbar">
+                        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                        <span class="proj-path">~/proyectos/huerta-hayuelos</span>
+                    </div>
+
+                    <div class="proj-thumb proj-thumb--garden">
+                        <span class="proj-tag">SITIO WEB</span>
+                        <img src="./assets/huertahayuelosweb.png " alt="Huerta Hayuelos" class="proj-img" ">
+                    </div>
+
+                    <div class="proj-body">
+                        <h3 class="proj-name">Web Huerta Hayuelos</h3>
+                        <p class="proj-desc">Sitio web informativo sobre historia y actividades de la huerta comunitaria Hayuelos, procesos de compostaje y cuidado de cultivos. Se usaron HTML, CSS, JS. </p>
+                        <div class="proj-stack">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">JS</span>
+                        </div>
+                        <a href="#" class="proj-link">Ver proyecto <span class="arrow">→</span></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Dashboard Energía -->
+            <div class="col-md-6 col-lg-4">
+                <article class="proj-card">
+                    <div class="proj-winbar">
+                        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                        <span class="proj-path">~/proyectos/dashboard-energia</span>
+                    </div>
+
+                    <div class="proj-thumb proj-thumb--energy">
+                        <span class="proj-tag">DASHBOARD</span>
+                        <svg viewBox="0 0 100 100" class="proj-icon">
+                            <path d="M18 80 V30 M18 80 H84" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <rect x="28" y="58" width="10" height="22" fill="currentColor"/>
+                            <rect x="46" y="44" width="10" height="36" fill="currentColor"/>
+                            <rect x="64" y="26" width="10" height="54" fill="currentColor"/>
+                        </svg>
+                    </div>
+
+                    <div class="proj-body">
+                        <h3 class="proj-name">Dashboard Energía</h3>
+                        <p class="proj-desc">Dashboard en PowerBI para el analisis de consumo energetico y generación de reportes.</p>
+                        <div class="proj-stack">
+                            <span class="chip">Power BI</span>
+                            <span class="chip">DAX</span>
+                        </div>
+                        <a href="#" class="proj-link">Ver proyecto <span class="arrow">→</span></a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <section id="proyectos" class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Proyectos destacados</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card bg-card text-light h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">AgendaPets</h4>
+                            <p class="card-text">Plataforma de reservas para peluquerías caninas.</p>
+                            <a href="#" class="btn btn-primary">Ver proyecto →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-card text-light h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Huerta Hayuelos</h4>
+                            <p class="card-text">Sitio web informativo sobre huerta comunitaria.</p>
+                            <a href="#" class="btn btn-primary">Ver proyecto →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-card text-light h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Dashboard Energía</h4>
+                            <p class="card-text">Dashboard en Power BI para análisis energético.</p>
+                            <a href="#" class="btn btn-primary">Ver proyecto →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-4">Trabajemos juntos</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-unstyled text-light">
+                        <li><strong>Email:</strong> carol.pineros.dev@gmail.com</li>
+                        <li><strong>Teléfono:</strong> +57 300 123 4567</li>
+                        <li><strong>Ubicación:</strong> Bogotá, Colombia</li>
+                        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/carol-pineros-dev/" class="text-primary">Perfil</a></li>
+                        <li><strong>GitHub:</strong> <a href="https://github.com/CarolPinerosTrujillo"
+                                class="text-primary">Perfil</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <form class="bg-card p-4 rounded">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Correo electrónico">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Mensaje"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+       <!-- Sobre mí -->
+ <section id="sobre-mi" class="py-5 bg-section">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="text-primary text-uppercase fw-semibold small">Conóceme</span>
+            <h2 class="display-5 fw-bold mt-2">Sobre mí</h2>
+        </div>
+
+        <div class="row align-items-center g-5">
+
+            <!-- Foto -->
+            <div class="col-lg-4 text-center">
+                <img
+                    src="./assets/carol2.png"
+                    alt="Foto de Carol Piñeros"
+                    class="img-fluid rounded-3 shadow"
+                    style="max-width: 340px; width:100%; height:420px; object-fit:cover;">
+            </div>
+
+            <!-- Texto -->
+            <div class="col-lg-8">
+                <p class="lead mb-4">
+                    Mi nombre es <strong>Carol Piñeros</strong>, desarrolladora de software e ingeniera mecánica. Disfruto construir soluciones que combinan lógica, rendimiento y propósito, desde APIs robustas hasta sistemas que transforman datos en decisiones.
+                </p>
+
+                <p class="text-secondary">
+                    Mi formación en ingeniería me enseñó a resolver problemas con pensamiento analítico; hoy aplico ese enfoque al desarrollo backend. Cambié motores por código, pero sigo impulsada por la misma energía: crear soluciones eficientes, escalables y bien diseñadas.
+                </p>
+
+                <p class="text-secondary">
+                    Actualmente me especializo en <strong>Java</strong> y <strong>Spring Boot</strong>. Me caracteriza la curiosidad, la iniciativa y el aprendizaje continuo; disfruto entender cómo funcionan las cosas, cuestionarlas y encontrar mejores formas de construirlas.
+                </p>
+
+                <p class="text-secondary mb-0">
+                    Fuera del código, me apasiona viajar, seguir las últimas tendencias en tecnología e inteligencia artificial, disfrutar de una buena película dramática y compartir un café. Después de todo, las mejores ideas suelen empezar con una taza de café ☕.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-dark text-center text-secondary">
+        <p>© 2026 Carol Piñeros. Todos los derechos reservados.</p>
+        <div>
+            <a href="#" class="text-primary me-3">LinkedIn</a>
+            <a href="#" class="text-primary me-3">GitHub</a>
+            <a href="#" class="text-primary">Gmail</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

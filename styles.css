@@ -1,1 +1,51 @@
-/* en construccion */
+body {
+    margin-top: 55px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0B0F1A;
+  color: #EAEAF0;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111827, #1B1F2E);
+  color: #fff;
+}
+
+.profile-pic {
+  width: 150px;
+  border: 4px solid #6C63FF;
+}
+
+.bg-section {
+  background-color: #111827;
+}
+
+.bg-card {
+  background-color: #1B1F2E;
+}
+
+h2 {
+  color: #6C63FF;
+}
+
+.btn-primary {
+  background-color: #6C63FF;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #AB55F7;
+}
+
+#sobre-mi p{
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+#sobre-mi img{
+    transition:.3s;
+}
+
+#sobre-mi img:hover{
+    transform:scale(1.02);
+}
