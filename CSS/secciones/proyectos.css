@@ -2,8 +2,8 @@
 .proj-section{
   position:relative;
   background:
-    radial-gradient(circle at 10% 10%, rgba(var(--accent-rgb),.10), transparent 40%),
-    radial-gradient(circle at 90% 90%, rgba(var(--accent-2-rgb),.12), transparent 40%),
+    radial-gradient(circle at 10% 10%, rgba(var(--energy-rgb),.07), transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(var(--energy-2-rgb),.07), transparent 40%),
     var(--color-bg-mid);
   padding-top:70px;
   padding-bottom:70px;

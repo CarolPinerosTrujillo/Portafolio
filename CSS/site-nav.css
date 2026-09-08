@@ -209,9 +209,9 @@
   align-items:center;
   justify-content:center;
   background:
-    radial-gradient(circle at 18% 18%, rgba(var(--energy-rgb),.1), transparent 52%),
-    radial-gradient(circle at 82% 82%, rgba(var(--accent-rgb),.14), transparent 52%),
-    rgba(16,12,8,.97);
+    radial-gradient(circle at 18% 18%, rgba(var(--energy-rgb),.12), transparent 52%),
+    radial-gradient(circle at 82% 82%, rgba(var(--tech-rgb),.12), transparent 52%),
+    rgba(10,14,12,.97);
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
   visibility:hidden;

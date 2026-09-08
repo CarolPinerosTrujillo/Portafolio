@@ -1,35 +1,35 @@
 /* ============================================================
    VARIABLES GLOBALES DEL PROYECTO
    Cárgalo PRIMERO, antes que cualquier otro CSS.
-   Paleta dark: TINTA & BOSQUE — verde renovable + cobre + lila.
+   Paleta dark: TINTA TERMINAL REDUCIDA — verde (familia) + lila de identidad.
    Los tripletes "--*-rgb" permiten rgba(var(--x-rgb), a).
    ============================================================ */
 :root{
-  /* ---- Colores de marca (dark) ---- */
-  --color-bg-deep:#17130E;
-  --color-bg-mid:#1E1912;
-  --color-bg-card:#272116;
-  --color-accent:#C3A6F2;   /* lila — identidad femenina */
-  --color-accent-2:#9D7FE0; /* amatista */
-  --color-text:#F0E9DC;
-  --color-text-dim:#A69B88;
-  --color-line:rgba(255,255,255,.14);
+  /* ---- Colores de marca (dark) — 3 familias: verde + lila ---- */
+  --color-bg-deep:#0A0E0C;
+  --color-bg-mid:#0E1310;
+  --color-bg-card:#151B17;
+  --color-accent:#C89BF0;   /* lila — identidad */
+  --color-accent-2:#A476E0; /* lila profundo */
+  --color-text:#E8F3EA;
+  --color-text-dim:#8FA59B;
+  --color-line:rgba(255,255,255,.12);
 
-  /* ---- Energía / diferenciación ---- */
-  --color-energy:#7EA96A;   /* verde musgo — renovable */
-  --color-energy-2:#9CC47F; /* glow suave */
-  --color-warm:#E28B3C;     /* cobre — calor industrial */
-  --color-tech:#B9A1EC;     /* lavanda tech */
-  --color-tech-2:#D2C0F7;
+  /* ---- Energía / diferenciación (1 familia verde-teal) ---- */
+  --color-energy:#57E389;   /* renovable */
+  --color-energy-2:#8DF0B4;
+  --color-warm:#F0B64E;     /* ámbar — solo sol/blog */
+  --color-tech:#4CD7C6;     /* teal (familia verde) */
+  --color-tech-2:#9FE8DF;
 
   /* ---- Tripletes RGB (rgba(var(--x-rgb), a)) ---- */
-  --accent-rgb:195,166,242;
-  --accent-2-rgb:157,127,224;
-  --energy-rgb:126,169,106;
-  --energy-2-rgb:156,196,127;
-  --warm-rgb:226,139,60;
-  --tech-rgb:185,161,236;
-  --tech-2-rgb:210,192,247;
+  --accent-rgb:200,155,240;
+  --accent-2-rgb:164,118,224;
+  --energy-rgb:87,227,137;
+  --energy-2-rgb:141,240,180;
+  --warm-rgb:240,182,78;
+  --tech-rgb:76,215,198;
+  --tech-2-rgb:159,232,223;
   --line-rgb:255,255,255;
 
   /* ---- Estilos del cursor custom ---- */
@@ -48,11 +48,11 @@
   --radius-sm: 8px;
 
   /* Acentos compartidos (sobreescritos en modo claro) */
-  --accent-blue:#C3A6F2;
-  --accent-violet:#9D7FE0;
-  --text-main:#F0E9DC;
-  --text-dim:#A69B88;
-  --line:rgba(255,255,255,.14);
+  --accent-blue:#C89BF0;
+  --accent-violet:#A476E0;
+  --text-main:#E8F3EA;
+  --text-dim:#8FA59B;
+  --line:rgba(255,255,255,.12);
 }
 
 /* ---- TEMA CLARO ---- */

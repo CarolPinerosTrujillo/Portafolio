@@ -3,7 +3,10 @@
    ============================================================ */
 .site-footer{
   position:relative;
-  background:var(--color-bg-mid);
+  background:
+    radial-gradient(circle at 15% 0%, rgba(var(--accent-rgb),.10), transparent 50%),
+    radial-gradient(circle at 85% 0%, rgba(var(--accent-2-rgb),.07), transparent 50%),
+    var(--color-bg-deep);
   border-top:1px solid var(--color-line);
   padding-top:56px;
 }

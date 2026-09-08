@@ -60,11 +60,19 @@
     return valid;
   }
 
+  var statusTimer = null;
   function showStatus(message, type) {
+    clearTimeout(statusTimer);
     statusBox.textContent = message;
     statusBox.classList.toggle('is-success', type === 'success');
     statusBox.classList.toggle('is-error', type === 'error');
     statusBox.hidden = false;
+    if (type === 'success') {
+      statusTimer = setTimeout(function () {
+        statusBox.classList.remove('is-success', 'is-error');
+        statusBox.hidden = true;
+      }, 5000);
+    }
   }
 
   function setSubmitting(on) {

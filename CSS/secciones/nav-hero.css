@@ -4,11 +4,11 @@
 
 /* ---------- Variables locales para el hero ---------- */
 :root{
-    --accent-blue:#C3A6F2;
-    --accent-violet:#9D7FE0;
-    --text-main:#F0E9DC;
-    --text-dim:#A69B88;
-    --line:rgba(255,255,255,.14);
+    --accent-blue:#C89BF0;
+    --accent-violet:#A476E0;
+    --text-main:#E8F3EA;
+    --text-dim:#8FA59B;
+    --line:rgba(255,255,255,.12);
 
     /* Escena hero (monitor / turbinas / escritorio) */
     --scene-laptop:#1B150E;
@@ -41,9 +41,9 @@
     color:var(--text-main);
     padding:clamp(100px, 14vh, 140px) clamp(24px, 5vw, 70px);
     background:
-        radial-gradient(circle at 15% 30%, rgba(var(--energy-rgb),.12), transparent 45%),
-        radial-gradient(circle at 85% 65%, rgba(var(--accent-rgb),.14), transparent 45%),
-        linear-gradient(120deg, #17130E 0%, #1E1912 55%, #0B0805 100%);
+        radial-gradient(circle at 15% 30%, rgba(var(--energy-rgb),.14), transparent 45%),
+        radial-gradient(circle at 85% 65%, rgba(var(--tech-rgb),.12), transparent 45%),
+        linear-gradient(120deg, #0A0E0C 0%, #0E1310 55%, #06090A 100%);
 }
 [data-theme="light"] .banner{
     color:#1B2036;
