@@ -1,0 +1,131 @@
+/* ============================================================
+   GENERAL.CSS — reglas base del sitio
+   Requiere que variables.css y typography.css ya estén cargados.
+   ============================================================ */
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin-top:0;
+  background-color:var(--color-bg-deep);
+  color:var(--color-text);
+  transition:background-color .35s ease, color .35s ease;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:1999;
+  pointer-events:none;
+  background:
+    radial-gradient(1200px 800px at 15% 10%, var(--cursor-glow), transparent 60%),
+    radial-gradient(1000px 700px at 85% 90%, var(--cursor-glow), transparent 60%);
+  opacity:.35;
+  display:none;
+}
+body.theme-bg-glow::before{ display:block; }
+
+/* Body con navbar superior — se usa en .banner para offset cuando no hay sidebar */
+.banner-with-top-nav{ scroll-margin-top:70px; }
+
+section[id]{
+  scroll-margin-top:80px;
+}
+
+.hero{
+  min-height:100vh;
+  background:linear-gradient(135deg, var(--color-bg-mid), var(--color-bg-card));
+  color:#fff;
+}
+
+.profile-pic{
+  width:150px;
+  border:4px solid var(--color-accent);
+}
+
+.bg-section{
+  background-color:var(--color-bg-mid);
+}
+
+.bg-card{
+  background-color:var(--color-bg-card);
+}
+
+h2{
+  color:var(--color-accent);
+}
+
+.btn-primary{
+  background-color:var(--color-accent);
+  border:none;
+  transition:background-color .25s ease, transform .2s ease;
+}
+.btn-primary:hover{
+  background-color:var(--color-accent-2);
+  transform:translateY(-2px);
+}
+
+/* Estado de foco visible para accesibilidad */
+a:focus-visible,
+button:focus-visible,
+.form-control:focus-visible{
+  outline:2px solid var(--color-accent);
+  outline-offset:2px;
+}
+
+#sobre-mi p{
+  line-height:1.9;
+  font-size:1.05rem;
+  color:var(--color-text-dim);
+}
+
+#sobre-mi img{
+  transition:.3s;
+}
+#sobre-mi img:hover{
+  transform:scale(1.02);
+}
+
+/* ---------- Scroll reveal (se activa desde main.js) ---------- */
+.js-enabled .reveal{
+  opacity:0;
+  transform:translateY(34px);
+  transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity, transform;
+}
+.js-enabled .reveal.is-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.reveal-delay-1{ transition-delay:.1s; }
+.reveal-delay-2{ transition-delay:.2s; }
+.reveal-delay-3{ transition-delay:.3s; }
+.reveal-delay-4{ transition-delay:.4s; }
+
+@media (prefers-reduced-motion: reduce){
+  .js-enabled .reveal{
+    opacity:1;
+    transform:none;
+  }
+}
+
+/* ---------- Typewriter ---------- */
+.typewriter-caret{
+  display:inline-block;
+  width:2px;
+  height:1em;
+  background:var(--color-energy);
+  margin-left:3px;
+  vertical-align:middle;
+  animation:caret-blink .85s steps(1) infinite;
+  border-radius:1px;
+}
+@keyframes caret-blink{ 50%{ opacity:0; } }
+
+@media (prefers-reduced-motion: reduce){
+  .typewriter-caret{ animation:none; display:none; }
+}

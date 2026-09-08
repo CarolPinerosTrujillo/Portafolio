@@ -17,72 +17,89 @@
     <link rel="stylesheet" href="CSS/secciones/sobre-mi.css">
     <link rel="stylesheet" href="CSS/secciones/contacto.css">
     <link rel="stylesheet" href="CSS/secciones/footer.css">
-    <link rel="stylesheet" href="CSS/site-nav.css">
+    <link rel="stylesheet" href="CSS/sidebar-nav.css">
     <link rel="stylesheet" href="CSS/custom-cursor.css">
     <link rel="stylesheet" href="CSS/timeline.css">
     <link rel="stylesheet" href="CSS/blog.css">
     <link rel="stylesheet" href="CSS/layout.css">
 </head>
 
-<body class="site-page">
+<body class="sidebar-mode">
 
 <!-- ====================================================================
-     NAVEGACIÓN SUPERIOR — navbar minimalista único (desktop + móvil)
+     SIDEBAR — visible en desktop (≥993px), se oculta en móvil
      ==================================================================== -->
-<header class="site-nav" id="site-nav">
-    <div class="site-nav-inner">
+<aside class="sidebar" role="navigation" aria-label="Navegación lateral">
 
-        <a class="nav-logo" href="#inicio" aria-label="Ir al inicio">
-            <img src="./assets/img/logo_minimalista.png" alt="Logo Carol Piñeros">
+    <div class="sidebar-nav">
+        <a href="#inicio" class="sidebar-link active" title="Inicio">
+            <svg viewBox="0 -960 960 960" fill="currentColor"><path d="M480-427ZM240-120q-50 0-85-35t-35-85v-240q0-24 9-46t26-39l240-240q17-18 39.5-26.5T480-840q23 0 45 8.5t40 26.5l240 240q17 17 26 39t9 46v240q0 50-35 85t-85 35H240Zm0-80h480q17 0 28.5-11.5T760-240v-240q0-8-3-15t-9-13L595-662l-59 58 144 144v180H280v-180l258-258-30-30q-8-8-15.5-10t-12.5-2q-5 0-12.5 2T452-748L212-508q-6 6-9 13t-3 15v240q0 17 11.5 28.5T240-200Zm120-160h240v-67L480-547 360-427v67Z"/></svg>
+            <span class="sidebar-tip">Inicio</span>
         </a>
-
-        <nav class="nav-menu-wrap" aria-label="Navegación principal">
-            <ul class="nav-menu">
-                <li><a href="#inicio" class="active">Inicio</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#tecnologias">Tecnologías</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#timeline">Transición</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-            </ul>
-        </nav>
-
-        <div class="nav-actions">
-            <button class="theme-toggle" aria-label="Cambiar tema">
-                <svg class="icon-sun" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4.1"/><g><rect x="11.05" y="2.1" width="1.9" height="3.6" rx="0.95"/><rect x="11.05" y="2.1" width="1.9" height="3.6" rx="0.95" transform="rotate(45 12 12)"/><rect x="11.05" y="2.1" width="1.9" height="3.6" rx="0.95" transform="rotate(90 12 12)"/><rect x="11.05" y="2.1" width="1.9" height="3.6" rx="0.95" transform="rotate(135 12 12)"/><rect x="11.05" y="2.1" width="1.9" height="3.6" rx="0.95" transform="rotate(180 12 12)"/><rect x="11.05" y="2.1" width="1.9" height="3.6" rx="0.95" transform="rotate(225 12 12)"/><rect x="11.05" y="2.1" width="1.9" height="3.6" rx="0.95" transform="rotate(270 12 12)"/><rect x="11.05" y="2.1" width="1.9" height="3.6" rx="0.95" transform="rotate(315 12 12)"/></g></svg>
-                <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 8 8 0 0 1-9-9Z"/></svg>
-            </button>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-drawer">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-
+        <a href="#proyectos" class="sidebar-link" title="Proyectos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <span class="sidebar-tip">Proyectos</span>
+        </a>
+        <a href="#tecnologias" class="sidebar-link" title="Tecnologías">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span class="sidebar-tip">Tecnologías</span>
+        </a>
+        <a href="#blog" class="sidebar-link" title="Blog">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span class="sidebar-tip">Blog</span>
+        </a>
+        <a href="#contacto" class="sidebar-link" title="Contacto">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="sidebar-tip">Contacto</span>
+        </a>
+        <a href="#timeline" class="sidebar-link" title="Mi transición">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="sidebar-tip">Mi transición</span>
+        </a>
+        <a href="#sobre-mi" class="sidebar-link" title="Sobre mí">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="sidebar-tip">Sobre mí</span>
+        </a>
     </div>
-</header>
 
-<!-- Drawer móvil a pantalla completa -->
-<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#tecnologias">Tecnologías</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#timeline">Transición</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-    </ul>
-</div>
+    <div class="sidebar-bottom">
+        <button class="theme-toggle" aria-label="Cambiar tema">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        </button>
+        <div class="sidebar-social">
+            <a href="https://linkedin.com/in/carolpineros-fullstack" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21h-4V9z"/></svg>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+            </a>
+        </div>
+    </div>
+</aside>
 
-<!-- Redes flotantes — esquina inferior derecha -->
-<div class="site-social" aria-label="Redes sociales">
-    <a href="https://linkedin.com/in/carolpineros-fullstack" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21h-4V9z"/></svg>
-    </a>
-    <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-    </a>
-</div>
+<!-- ====================================================================
+     NAVBAR SUPERIOR — se muestra solo en móvil / tablet
+     ==================================================================== -->
+<nav class="navbar navbar-expand-lg top-nav">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">Carol Piñeros</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="topNavMenu">
+            <ul class="navbar-nav gap-3">
+                <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tecnologias">Tech</a></li>
+                <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="#timeline">Transición</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 
 <!-- ====================================================================
@@ -96,13 +113,13 @@
             <svg viewBox="0 0 640 460" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="metalGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0" stop-color="var(--scene-metal-hi)"/>
-                        <stop offset="1" stop-color="var(--scene-metal-lo)"/>
+                        <stop offset="0" stop-color="#20263c"/>
+                        <stop offset="1" stop-color="#10131f"/>
                     </linearGradient>
                     <linearGradient id="deskGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0" stop-color="var(--scene-desk-hi)" stop-opacity=".95"/>
-                        <stop offset=".7" stop-color="var(--scene-desk-lo)" stop-opacity=".35"/>
-                        <stop offset="1" stop-color="var(--scene-desk-lo)" stop-opacity="0"/>
+                        <stop offset="0" stop-color="#181f38" stop-opacity=".95"/>
+                        <stop offset=".7" stop-color="#080b16" stop-opacity=".35"/>
+                        <stop offset="1" stop-color="#080b16" stop-opacity="0"/>
                     </linearGradient>
                     <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
                         <feGaussianBlur stdDeviation="5"/>
@@ -117,17 +134,17 @@
                     <path d="M16 380 C10 360 6 345 16 328" stroke="#3a6b52" stroke-width="3" fill="none" stroke-linecap="round"/>
                     <path d="M18 380 C18 358 22 340 18 322" stroke="#3a6b52" stroke-width="3" fill="none" stroke-linecap="round"/>
                     <path d="M20 380 C28 362 34 348 26 330" stroke="#3a6b52" stroke-width="3" fill="none" stroke-linecap="round"/>
-                    <rect x="0" y="380" width="36" height="30" rx="2" fill="var(--scene-pot)"/>
+                    <rect x="0" y="380" width="36" height="30" rx="2" fill="#1b2440"/>
                 </g>
                 <g>
-                    <rect x="42" y="372" width="42" height="36" rx="6" fill="url(#metalGrad)" stroke="var(--scene-metal-line)" stroke-width="2"/>
-                    <path d="M84 380 q16 0 16 8 t-16 8" fill="none" stroke="var(--scene-metal-line)" stroke-width="3"/>
+                    <rect x="42" y="372" width="42" height="36" rx="6" fill="url(#metalGrad)" stroke="#262d48" stroke-width="2"/>
+                    <path d="M84 380 q16 0 16 8 t-16 8" fill="none" stroke="#262d48" stroke-width="3"/>
                 </g>
-                <rect x="60" y="20" width="460" height="280" rx="10" fill="var(--scene-laptop)" stroke="var(--scene-lapedge)" stroke-width="8"/>
+                <rect x="60" y="20" width="460" height="280" rx="10" fill="#0b0f1c" stroke="#161c30" stroke-width="8"/>
                 <g clip-path="url(#screenClip)">
-                    <rect x="66" y="26" width="448" height="268" fill="var(--scene-screen)"/>
-                    <rect x="66" y="26" width="140" height="268" fill="var(--scene-screen)"/>
-                    <line x1="206" y1="26" x2="206" y2="294" stroke="var(--scene-gutter)" stroke-width="1"/>
+                    <rect x="66" y="26" width="448" height="268" fill="#0e1424"/>
+                    <rect x="66" y="26" width="140" height="268" fill="#0e1424"/>
+                    <line x1="206" y1="26" x2="206" y2="294" stroke="#1c2440" stroke-width="1"/>
                     <text x="80" y="50" font-size="12" fill="#93a1d4">▸ src</text>
                     <text x="92" y="68" font-size="12" fill="#93a1d4">▸ api</text>
                     <text x="92" y="86" font-size="12" fill="#93a1d4">▸ services</text>
@@ -144,12 +161,12 @@
                     <text x="220" y="170" font-size="12"><tspan fill="#6672a8">7  </tspan><tspan fill="#c3ccf2">  }</tspan></text>
                     <text x="220" y="190" font-size="12"><tspan fill="#6672a8">8  </tspan><tspan fill="#c3ccf2">}</tspan><tspan class="cursor" fill="#5b8def">▌</tspan></text>
                 </g>
-                <rect x="60" y="20" width="460" height="280" rx="10" fill="none" stroke="var(--scene-lapedge)" stroke-width="8"/>
+                <rect x="60" y="20" width="460" height="280" rx="10" fill="none" stroke="#161c30" stroke-width="8"/>
                 <rect x="60" y="20" width="460" height="140" rx="10" fill="#ffffff" opacity=".03"/>
                 <rect x="283" y="300" width="14" height="46" fill="url(#metalGrad)"/>
                 <rect x="210" y="346" width="160" height="14" rx="6" fill="url(#metalGrad)"/>
-                <rect x="110" y="392" width="210" height="26" rx="5" fill="url(#metalGrad)" stroke="var(--scene-metal-line)" stroke-width="1.5"/>
-                <rect x="344" y="396" width="24" height="36" rx="11" fill="url(#metalGrad)" stroke="var(--scene-metal-line)" stroke-width="1.5"/>
+                <rect x="110" y="392" width="210" height="26" rx="5" fill="url(#metalGrad)" stroke="#262d48" stroke-width="1.5"/>
+                <rect x="344" y="396" width="24" height="36" rx="11" fill="url(#metalGrad)" stroke="#262d48" stroke-width="1.5"/>
             </svg>
         </div>
 

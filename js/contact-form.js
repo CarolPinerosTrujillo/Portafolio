@@ -1,0 +1,133 @@
+(function () {
+  'use strict';
+
+  var ENDPOINT = 'https://formsubmit.co/ajax/caroll25m@gmail.com';
+  var SUBJECT = 'Mensaje desde el portafolio de Carol';
+
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+
+  var fields = {
+    name: document.getElementById('c-name'),
+    email: document.getElementById('c-email'),
+    message: document.getElementById('c-message')
+  };
+
+  var submitBtn = document.getElementById('contact-submit');
+  var statusBox = form.querySelector('.contact-form-status');
+
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function setError(input, message) {
+    var text = message || '';
+    var err = document.getElementById(input.id + '-error');
+    input.setAttribute('aria-invalid', text ? 'true' : 'false');
+    input.closest('.field').classList.toggle('has-error', !!text);
+    if (err) {
+      err.textContent = text;
+      err.hidden = !text;
+    }
+    return !!text;
+  }
+
+  function validate() {
+    var valid = true;
+
+    var name = fields.name.value.trim();
+    if (name.length < 2) {
+      setError(fields.name, name.length === 0 ? 'Escribe tu nombre.' : 'El nombre debe tener al menos 2 caracteres.');
+      valid = false;
+    } else {
+      setError(fields.name, '');
+    }
+
+    var email = fields.email.value.trim();
+    if (!EMAIL_RE.test(email)) {
+      setError(fields.email, email.length === 0 ? 'Escribe tu correo electrónico.' : 'Ingresa un correo válido, por ejemplo: nombre@dominio.com');
+      valid = false;
+    } else {
+      setError(fields.email, '');
+    }
+
+    var message = fields.message.value.trim();
+    if (message.length < 10) {
+      setError(fields.message, message.length === 0 ? 'Escribe tu mensaje.' : 'El mensaje debe tener al menos 10 caracteres.');
+      valid = false;
+    } else {
+      setError(fields.message, '');
+    }
+
+    return valid;
+  }
+
+  function showStatus(message, type) {
+    statusBox.textContent = message;
+    statusBox.classList.toggle('is-success', type === 'success');
+    statusBox.classList.toggle('is-error', type === 'error');
+    statusBox.hidden = false;
+  }
+
+  function setSubmitting(on) {
+    submitBtn.disabled = on;
+    submitBtn.classList.toggle('is-loading', on);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var valid = validate();
+    if (!valid) return;
+
+    var payload = {
+      name: fields.name.value.trim(),
+      email: fields.email.value.trim(),
+      message: fields.message.value.trim(),
+      _subject: SUBJECT,
+      _captcha: 'false'
+    };
+
+    setSubmitting(true);
+    statusBox.hidden = true;
+
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        if (!res.ok) {
+          return res.json().then(function () { throw new Error('bad status'); });
+        }
+        return res.json();
+      })
+      .then(function (data) {
+        if (data && data.success === 'true') {
+          form.reset();
+          [fields.name, fields.email, fields.message].forEach(function (f) {
+            f.setAttribute('aria-invalid', 'false');
+            f.closest('.field').classList.remove('has-error');
+            document.getElementById(f.id + '-error').hidden = true;
+          });
+          showStatus('¡Gracias! Tu mensaje llegó correctamente, te responderé pronto.', 'success');
+        } else {
+          throw new Error('formspree parsed false');
+        }
+      })
+      .catch(function () {
+        showStatus('Ocurrió un error al enviar. Inténtalo de nuevo o escríbeme a caroll25m@gmail.com.', 'error');
+      })
+      .finally(function () {
+        setSubmitting(false);
+      });
+  });
+
+  ['input', 'blur'].forEach(function (evt) {
+    form.addEventListener(evt, function (e) {
+      if (e.target === fields.name || e.target === fields.email || e.target === fields.message) {
+        if (e.target.getAttribute('aria-invalid') === 'true') {
+          validate();
+        }
+      }
+    });
+  });
+})();

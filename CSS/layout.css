@@ -1,0 +1,94 @@
+/* ============================================================
+   LAYOUT — Stats en Sobre Mí + extras
+   ============================================================ */
+
+/* ---------- Stats en Sobre Mí ---------- */
+.about-stats{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:14px;
+  margin-top:28px;
+}
+.stat-box{
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--color-line);
+  border-radius:var(--radius-sm);
+  padding:18px 10px 14px;
+  text-align:center;
+  transition:transform .25s ease, border-color .25s ease, background .25s ease;
+}
+[data-theme="light"] .stat-box{ background:rgba(15,20,45,.03); }
+.stat-box:hover{
+  transform:translateY(-4px);
+  border-color:var(--color-energy);
+  background:rgba(var(--energy-rgb),.06);
+}
+.stat-value{
+  font-family:var(--font-mono);
+  font-size:26px;
+  font-weight:600;
+  color:var(--color-text);
+  display:block;
+  line-height:1.1;
+}
+.stat-value .stat-suffix{ color:var(--color-energy); }
+.stat-label{
+  font-family:var(--font-mono);
+  font-size:10px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--color-text-dim);
+  margin-top:6px;
+  display:block;
+}
+
+/* ---------- Tarjeta 100% Ganas ---------- */
+.stat-100{
+  grid-column:1 / -1;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  background:linear-gradient(120deg, rgba(var(--energy-rgb),.15), rgba(var(--tech-rgb),.12));
+  border:1px solid rgba(var(--energy-rgb),.35);
+  border-radius:var(--radius-sm);
+  padding:18px 22px;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.stat-100:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(var(--energy-rgb),.25);
+}
+.stat-100 svg{
+  width:30px;
+  height:30px;
+  color:var(--color-energy);
+  flex:0 0 auto;
+  filter:drop-shadow(0 0 8px rgba(var(--energy-rgb),.6));
+}
+.stat-100-value{
+  font-family:var(--font-mono);
+  font-size:28px;
+  font-weight:700;
+  color:var(--color-energy);
+  line-height:1;
+}
+.stat-100-text{
+  font-weight:600;
+  color:var(--color-text);
+  font-size:14.5px;
+  letter-spacing:.02em;
+}
+[data-theme="light"] .stat-100{ border-color:rgba(var(--energy-rgb),.35); }
+
+/* ---------- Responsive ---------- */
+@media (max-width:600px){
+  .about-stats{
+    grid-template-columns:repeat(2, 1fr);
+    gap:10px;
+  }
+  .stat-box{ padding:14px 8px 12px; }
+  .stat-value{ font-size:22px; }
+  .stat-100{ padding:16px; }
+  .stat-100-text{ font-size:13px; }
+}

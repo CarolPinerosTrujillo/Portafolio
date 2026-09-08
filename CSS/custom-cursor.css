@@ -1,0 +1,131 @@
+/* ============================================================
+   CUSTOM CURSOR — energia, solo puntero fino
+   ============================================================ */
+@media (pointer:fine){
+  body.custom-cursor-body,
+  body.custom-cursor-body a,
+  body.custom-cursor-body button,
+  body.custom-cursor-body input,
+  body.custom-cursor-body textarea{
+    cursor:none;
+  }
+}
+
+/* ---- Punto central (orb de energía) ---- */
+.cursor-dot{
+  position:fixed;
+  z-index:9999;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--color-energy);
+  box-shadow:0 0 12px var(--cursor-glow);
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  transition:width .15s ease, height .15s ease, background .15s ease;
+}
+
+/* ---- Anillo exterior (campo de energía) ---- */
+.cursor-ring{
+  position:fixed;
+  z-index:9998;
+  width:var(--cursor-size);
+  height:var(--cursor-size);
+  border-radius:50%;
+  border:2px solid var(--color-energy);
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  transition:width .2s ease, height .2s ease, border-color .2s ease, background .2s ease;
+  mix-blend-mode:screen;
+}
+[data-theme="light"] .cursor-ring{ mix-blend-mode:multiply; }
+
+/* ---- Rayo que acompaña al cursor ---- */
+.cursor-bolt{
+  position:fixed;
+  z-index:9999;
+  width:20px;
+  height:20px;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  opacity:.9;
+  transition:opacity .2s ease;
+}
+.cursor-bolt svg{
+  width:100%;
+  height:100%;
+  filter:drop-shadow(0 0 8px rgba(var(--energy-rgb),.9));
+}
+
+/* ---- Explosión "trueno" al hacer click ---- */
+.cursor-flash{
+  position:fixed;
+  z-index:10000;
+  width:20px;
+  height:20px;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  animation:thunder-bolt .5s ease-out forwards;
+}
+.cursor-flash svg{
+  width:100%;
+  height:100%;
+  filter:drop-shadow(0 0 14px rgba(var(--warm-rgb),.9));
+}
+@keyframes thunder-bolt{
+  0%{
+    transform:translate(-50%,-50%) scale(.3) rotate(-8deg);
+    opacity:1;
+  }
+  35%{
+    transform:translate(-50%,-50%) scale(1.5) rotate(6deg);
+    opacity:1;
+  }
+  70%{
+    transform:translate(-50%,-50%) scale(2) rotate(-2deg);
+    opacity:.6;
+  }
+  100%{
+    transform:translate(-50%,-50%) scale(2.4) rotate(3deg);
+    opacity:0;
+  }
+}
+
+/* -- anillo crece sobre links -- */
+.cursor-ring.cursor-link{
+  width:calc(var(--cursor-size) * 1.7);
+  height:calc(var(--cursor-size) * 1.7);
+  background:var(--cursor-glow);
+  border-color:var(--color-tech-2);
+}
+.cursor-dot.cursor-link{
+  background:var(--color-tech);
+  box-shadow:0 0 14px rgba(var(--tech-rgb),.8);
+}
+.cursor-ring.cursor-active,
+.cursor-dot.cursor-active{
+  border-color:transparent;
+}
+
+@media (pointer:coarse){
+  .cursor-dot, .cursor-ring, .cursor-bolt, .cursor-flash{ display:none; }
+}
+
+/* ============================================================
+   PARTÍCULAS DE ENERGÍA — canvas en el hero
+   ============================================================ */
+#energy-particles{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:1;
+  opacity:.85;
+}
+@media (max-width:768px){
+  #energy-particles{ opacity:.45; }
+}
+@media (prefers-reduced-motion: reduce){
+  #energy-particles{ display:none; }
+}

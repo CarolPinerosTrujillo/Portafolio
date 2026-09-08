@@ -1,0 +1,236 @@
+/* ============================================================
+   TIMELINE — "Mi Transición: de Ingeniería a Código"
+   ============================================================ */
+.timeline-section{
+  position:relative;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(var(--energy-rgb),.10), transparent 45%),
+    radial-gradient(circle at 10% 90%, rgba(var(--tech-rgb),.10), transparent 45%),
+    var(--color-bg-deep);
+  padding:var(--space-section) 0;
+  overflow:hidden;
+}
+
+.timeline-eyebrow{
+  text-align:center;
+  letter-spacing:.5em;
+  font-size:clamp(11px, 1.3vw, 14px);
+  color:var(--color-energy);
+  text-transform:uppercase;
+  margin-bottom:.7em;
+}
+
+.timeline-title{
+  text-align:center;
+  color:var(--color-text);
+  font-size:clamp(22px, 3vw, 34px);
+  margin:0 0 10px 0;
+}
+
+.timeline-sub{
+  text-align:center;
+  color:var(--color-text-dim);
+  font-size:14px;
+  max-width:520px;
+  margin:0 auto clamp(40px, 6vw, 64px);
+  line-height:1.7;
+}
+
+/* ---------- Contenedor ---------- */
+.timeline{
+  position:relative;
+  max-width:920px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* línea vertical que conecta los nodos */
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(180deg, transparent, var(--color-energy) 12%, var(--color-tech) 85%, transparent);
+  transform:translateX(-50%);
+  opacity:.6;
+}
+
+.timeline-progress{
+  position:absolute;
+  left:50%;
+  top:0;
+  width:2px;
+  height:0;
+  background:linear-gradient(180deg, var(--color-energy), var(--color-tech));
+  transform:translateX(-50%);
+  box-shadow:0 0 14px rgba(var(--energy-rgb),.6);
+  transition:height .4s linear;
+  z-index:1;
+}
+
+/* ---------- Ítem ---------- */
+.timeline-item{
+  position:relative;
+  width:50%;
+  padding:0 46px 56px 0;
+}
+
+.timeline-item:nth-child(even){
+  margin-left:50%;
+  padding:0 0 56px 46px;
+}
+
+/* nodo */
+.timeline-item::before{
+  content:attr(data-year);
+  position:absolute;
+  top:6px;
+  right:-14px;
+  transform:translateX(50%);
+  width:44px; height:44px;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(135deg, var(--color-energy), var(--color-tech));
+  color:#fff;
+  font-size:8.5px;
+  font-weight:600;
+  letter-spacing:.02em;
+  z-index:3;
+  border:3px solid var(--color-bg-deep);
+  box-shadow:0 0 0 2px rgba(var(--energy-rgb),.25), 0 6px 18px rgba(var(--energy-rgb),.35);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+[data-theme="light"] .timeline-item::before{ border-color:var(--color-bg-deep); }
+
+.timeline-item:hover::before{
+  transform:translateX(50%) scale(1.15);
+  box-shadow:0 0 0 2px rgba(var(--energy-rgb),.35), 0 10px 26px rgba(var(--energy-rgb),.5);
+}
+
+.timeline-item:nth-child(even)::before{
+  right:auto;
+  left:-14px;
+  transform:translateX(-50%);
+}
+.timeline-item:nth-child(even):hover::before{
+  transform:translateX(-50%) scale(1.15);
+}
+
+/* ---------- Tarjeta del nodo ---------- */
+.timeline-card{
+  background:linear-gradient(160deg, rgba(41,35,24,.92), rgba(20,16,11,.96));
+  border:1px solid var(--color-line);
+  border-radius:var(--radius-md);
+  padding:22px 24px;
+  position:relative;
+  transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease, background .3s ease;
+}
+[data-theme="light"] .timeline-card{
+  background:linear-gradient(160deg, rgba(255,255,255,.97), rgba(237,239,247,.98));
+}
+.timeline-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(var(--energy-rgb),.45);
+  box-shadow:0 20px 45px rgba(0,0,0,.4), 0 0 0 1px rgba(var(--energy-rgb),.12);
+}
+
+.timeline-item:nth-child(odd) .timeline-card::after{
+  content:"";
+  position:absolute;
+  right:-8px;
+  top:24px;
+  width:16px; height:16px;
+  background:inherit;
+  transform:rotate(45deg);
+  border-top:1px solid var(--color-line);
+  border-right:1px solid var(--color-line);
+}
+.timeline-item:nth-child(even) .timeline-card::after{
+  content:"";
+  position:absolute;
+  left:-8px;
+  top:24px;
+  width:16px; height:16px;
+  background:inherit;
+  transform:rotate(45deg);
+  border-bottom:1px solid var(--color-line);
+  border-left:1px solid var(--color-line);
+}
+
+.timeline-role{
+  color:var(--color-text);
+  font-family:var(--font-display);
+  font-size:17px;
+  font-weight:600;
+  margin:0 0 6px 0;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.timeline-role svg{ width:16px; height:16px; flex:0 0 auto; }
+
+.timeline-org{
+  color:var(--color-text-dim);
+  font-size:12.5px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.timeline-desc{
+  color:var(--color-text-dim);
+  font-size:13.5px;
+  line-height:1.7;
+  margin:0 0 12px 0;
+}
+
+.timeline-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.timeline-tag{
+  font-size:10.5px;
+  letter-spacing:.05em;
+  color:var(--color-text-dim);
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.14);
+  padding:3px 9px;
+  border-radius:20px;
+}
+.timeline-tag--energy{ color:var(--color-energy); border-color:rgba(var(--energy-rgb),.3); }
+.timeline-tag--tech{ color:var(--color-tech); border-color:rgba(var(--tech-rgb),.3); }
+
+/* ---------- Responsive ---------- */
+@media (max-width:768px){
+  .timeline::before{ left:16px; }
+  .timeline-progress{ left:16px; }
+
+  .timeline-item,
+  .timeline-item:nth-child(even){
+    width:100%;
+    margin-left:0;
+    padding:0 0 40px 46px;
+  }
+
+  .timeline-item::before,
+  .timeline-item:nth-child(even)::before{
+    left:16px;
+    right:auto;
+    transform:translateX(-50%);
+    width:36px; height:36px;
+    font-size:7.5px;
+  }
+  .timeline-item:hover::before,
+  .timeline-item:nth-child(even):hover::before{
+    transform:translateX(-50%) scale(1.1);
+  }
+  .timeline-item:nth-child(odd) .timeline-card::after,
+  .timeline-item:nth-child(even) .timeline-card::after{
+    left:-8px;
+    top:20px;
+  }
+}

@@ -1,0 +1,50 @@
+/* ============================================================
+   TIPOGRAFÍA GLOBAL
+   Cárgalo justo después de variables.css.
+   ============================================================ */
+
+body{
+  font-family:var(--font-body);
+}
+
+/* Nombre y títulos grandes → serif con carácter */
+h1, h2, h3,
+.name,
+.timeline-title,
+.skills-title,
+.blog-title,
+.proj-title,
+.tech-title,
+.contact-title,
+.footer-brand{
+  font-family:var(--font-display);
+  letter-spacing:.01em;
+}
+
+/* Detalles tipo "código" en toda la web → monospace consistente */
+.eyebrow,
+.role,
+.proj-eyebrow,
+.timeline-eyebrow,
+.skills-eyebrow,
+.blog-eyebrow,
+.proj-path,
+.proj-name,
+.chip,
+.tech-label,
+.timeline-year,
+.timeline-tag,
+.skill-name,
+.skill-pct,
+.code-window, .code-window *,
+.btn-cta,
+.sidebar-dot,
+.proj-link,
+footer .footer-mono{
+  font-family:var(--font-mono);
+}
+
+/* Cuerpo de texto / párrafos → Poppins, siempre */
+p, li, .intro, .proj-desc, .card-text, .form-control, .contact-info{
+  font-family:var(--font-body);
+}

@@ -1,0 +1,91 @@
+/* ============================================================
+   VARIABLES GLOBALES DEL PROYECTO
+   Cárgalo PRIMERO, antes que cualquier otro CSS.
+   Paleta dark: TINTA & BOSQUE — verde renovable + cobre + lila.
+   Los tripletes "--*-rgb" permiten rgba(var(--x-rgb), a).
+   ============================================================ */
+:root{
+  /* ---- Colores de marca (dark) ---- */
+  --color-bg-deep:#17130E;
+  --color-bg-mid:#1E1912;
+  --color-bg-card:#272116;
+  --color-accent:#C3A6F2;   /* lila — identidad femenina */
+  --color-accent-2:#9D7FE0; /* amatista */
+  --color-text:#F0E9DC;
+  --color-text-dim:#A69B88;
+  --color-line:rgba(255,255,255,.14);
+
+  /* ---- Energía / diferenciación ---- */
+  --color-energy:#7EA96A;   /* verde musgo — renovable */
+  --color-energy-2:#9CC47F; /* glow suave */
+  --color-warm:#E28B3C;     /* cobre — calor industrial */
+  --color-tech:#B9A1EC;     /* lavanda tech */
+  --color-tech-2:#D2C0F7;
+
+  /* ---- Tripletes RGB (rgba(var(--x-rgb), a)) ---- */
+  --accent-rgb:195,166,242;
+  --accent-2-rgb:157,127,224;
+  --energy-rgb:126,169,106;
+  --energy-2-rgb:156,196,127;
+  --warm-rgb:226,139,60;
+  --tech-rgb:185,161,236;
+  --tech-2-rgb:210,192,247;
+  --line-rgb:255,255,255;
+
+  /* ---- Estilos del cursor custom ---- */
+  --cursor-size:30px;
+  --cursor-glow:rgba(var(--energy-rgb),.4);
+
+  /* ---- Tipografía ---- */
+  --font-display:'Fraunces', serif;
+  --font-body:'Poppins', sans-serif;
+  --font-mono:'JetBrains Mono', monospace;
+
+  /* ---- Espaciado / radios ---- */
+  --space-section: clamp(60px, 8vw, 110px);
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  /* Acentos compartidos (sobreescritos en modo claro) */
+  --accent-blue:#C3A6F2;
+  --accent-violet:#9D7FE0;
+  --text-main:#F0E9DC;
+  --text-dim:#A69B88;
+  --line:rgba(255,255,255,.14);
+}
+
+/* ---- TEMA CLARO ---- */
+[data-theme="light"]{
+  --color-bg-deep:#F4F5FB;
+  --color-bg-mid:#FFFFFF;
+  --color-bg-card:#EDEFF7;
+  --color-accent:#5B4BFF;
+  --color-accent-2:#9333EA;
+  --color-text:#1B2036;
+  --color-text-dim:#5A6284;
+  --color-line:rgba(15,20,45,.12);
+
+  --color-energy:#047857;
+  --color-energy-2:#059669;
+  --color-warm:#B45309;
+  --color-tech:#1D4ED8;
+  --color-tech-2:#2563EB;
+
+  --accent-rgb:91,75,255;
+  --accent-2-rgb:147,51,234;
+  --energy-rgb:4,120,87;
+  --energy-2-rgb:5,150,105;
+  --warm-rgb:180,83,9;
+  --tech-rgb:29,78,216;
+  --tech-2-rgb:37,99,235;
+  --line-rgb:15,20,45;
+
+  --cursor-glow:rgba(var(--energy-rgb),.30);
+
+  --accent-blue:#2563EB;
+  --accent-violet:#7C3AED;
+  --text-main:#111827;
+  --text-dim:#4B5563;
+  --line:#D1D5DB;
+}
