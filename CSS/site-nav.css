@@ -25,7 +25,7 @@
 }
 [data-theme="light"] .site-nav::before{
   background:
-    linear-gradient(180deg, rgba(246,247,252,.96) 0%, rgba(246,247,252,.45) 55%, rgba(246,247,252,0) 100%);
+    linear-gradient(180deg, rgba(251,253,249,.96) 0%, rgba(251,253,249,.45) 55%, rgba(251,253,249,0) 100%);
 }
 .site-nav.scrolled::before{
   opacity:1;
@@ -222,7 +222,7 @@
   background:
     radial-gradient(circle at 18% 18%, rgba(var(--energy-rgb),.14), transparent 52%),
     radial-gradient(circle at 82% 82%, rgba(var(--accent-rgb),.14), transparent 52%),
-    rgba(246,247,252,.97);
+    rgba(251,253,249,.97);
 }
 .nav-drawer.open{
   visibility:visible;

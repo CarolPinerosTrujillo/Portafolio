@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var ENDPOINT = 'https://formsubmit.co/ajax/caroll25m@gmail.com';
+  var ENDPOINT = 'https://formsubmit.co/ajax/carolpy25m@gmail.com';
   var SUBJECT = 'Mensaje desde el portafolio de Carol';
 
   var form = document.getElementById('contact-form');
@@ -122,7 +122,7 @@
         }
       })
       .catch(function () {
-        showStatus('Ocurrió un error al enviar. Inténtalo de nuevo o escríbeme a caroll25m@gmail.com.', 'error');
+        showStatus('Ocurrió un error al enviar. Inténtalo de nuevo o escríbeme a carolpy25m@gmail.com.', 'error');
       })
       .finally(function () {
         setSubmitting(false);

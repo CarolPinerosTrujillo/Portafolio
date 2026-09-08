@@ -17,7 +17,7 @@
   text-align:center;
   transition:transform .25s ease, border-color .25s ease, background .25s ease;
 }
-[data-theme="light"] .stat-box{ background:rgba(15,20,45,.03); }
+[data-theme="light"] .stat-box{ background:rgba(var(--accent-rgb),.06); }
 .stat-box:hover{
   transform:translateY(-4px);
   border-color:var(--color-energy);

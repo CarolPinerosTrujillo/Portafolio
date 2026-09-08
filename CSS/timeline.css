@@ -128,7 +128,7 @@
   transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease, background .3s ease;
 }
 [data-theme="light"] .timeline-card{
-  background:linear-gradient(160deg, rgba(255,255,255,.97), rgba(237,239,247,.98));
+  background:linear-gradient(160deg, rgba(255,255,255,.98), rgba(243,247,242,.98));
 }
 .timeline-card:hover{
   transform:translateY(-5px);

@@ -12,7 +12,7 @@
 }
 [data-theme="light"] .site-footer{
   background:
-    linear-gradient(180deg, #FFFFFF 0%, rgba(var(--accent-rgb),.6) 55%, rgba(var(--tech-rgb),.5) 100%);
+    linear-gradient(180deg, #FBFDF9 0%, rgba(var(--accent-rgb),.7) 55%, rgba(var(--tech-rgb),.6) 100%);
 }
 .site-footer::before{
   content:"";

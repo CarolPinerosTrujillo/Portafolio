@@ -55,37 +55,37 @@
   --line:rgba(255,255,255,.12);
 }
 
-/* ---- TEMA CLARO ---- */
+/* ---- TEMA CLARO — "papel terminal": verde + lila a tonos del dark ---- */
 [data-theme="light"]{
-  --color-bg-deep:#F4F5FB;
-  --color-bg-mid:#FFFFFF;
-  --color-bg-card:#EDEFF7;
-  --color-accent:#5B4BFF;
-  --color-accent-2:#9333EA;
-  --color-text:#1B2036;
-  --color-text-dim:#5A6284;
-  --color-line:rgba(15,20,45,.12);
+  --color-bg-deep:#F2F5F0;
+  --color-bg-mid:#FBFDF9;
+  --color-bg-card:#EDF2EA;
+  --color-accent:#7F55C6;   /* lila */
+  --color-accent-2:#6C47AD; /* lila profundo */
+  --color-text:#18211B;
+  --color-text-dim:#5A665E;
+  --color-line:rgba(18,32,24,.14);
 
-  --color-energy:#047857;
-  --color-energy-2:#059669;
-  --color-warm:#B45309;
-  --color-tech:#1D4ED8;
-  --color-tech-2:#2563EB;
+  --color-energy:#1D7D4E;   /* verde terminal */
+  --color-energy-2:#2B8F5C;
+  --color-warm:#B4630F;     /* ámbar */
+  --color-tech:#16807A;     /* teal */
+  --color-tech-2:#218F88;
 
-  --accent-rgb:91,75,255;
-  --accent-2-rgb:147,51,234;
-  --energy-rgb:4,120,87;
-  --energy-2-rgb:5,150,105;
-  --warm-rgb:180,83,9;
-  --tech-rgb:29,78,216;
-  --tech-2-rgb:37,99,235;
-  --line-rgb:15,20,45;
+  --accent-rgb:127,85,198;
+  --accent-2-rgb:108,71,173;
+  --energy-rgb:29,125,78;
+  --energy-2-rgb:43,143,92;
+  --warm-rgb:180,99,15;
+  --tech-rgb:22,128,122;
+  --tech-2-rgb:33,143,136;
+  --line-rgb:18,32,24;
 
-  --cursor-glow:rgba(var(--energy-rgb),.30);
+  --cursor-glow:rgba(var(--energy-rgb),.22);
 
-  --accent-blue:#2563EB;
-  --accent-violet:#7C3AED;
-  --text-main:#111827;
-  --text-dim:#4B5563;
-  --line:#D1D5DB;
+  --accent-blue:#7F55C6;
+  --accent-violet:#6C47AD;
+  --text-main:#18211B;
+  --text-dim:#5A665E;
+  --line:rgba(18,32,24,.14);
 }
