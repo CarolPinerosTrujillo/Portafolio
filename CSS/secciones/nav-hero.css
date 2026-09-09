@@ -23,11 +23,11 @@
     --scene-desk-lo:#0C0A07;
 }
 [data-theme="light"]{
-    --accent-blue:#7F55C6;
-    --accent-violet:#6C47AD;
-    --text-main:#18211B;
-    --text-dim:#5A665E;
-    --line:rgba(18,32,24,.14);
+    --accent-blue:#6B3FA0;
+    --accent-violet:#5A3390;
+    --text-main:#1A1E16;
+    --text-dim:#4A5548;
+    --line:rgba(60,50,35,.12);
 }
 
 /* ============ BANNER ============ */
@@ -48,10 +48,10 @@
 [data-theme="light"] .banner{
     color:var(--text-main);
     background:
-        radial-gradient(circle at 12% 28%, rgba(var(--energy-rgb),.14), transparent 42%),
-        radial-gradient(circle at 88% 68%, rgba(var(--tech-rgb),.12), transparent 46%),
-        radial-gradient(circle at 50% 115%, rgba(var(--accent-2-rgb),.06), transparent 60%),
-        linear-gradient(125deg, #F6FAF4 0%, #EDF5EE 45%, #E6EFF0 100%);
+        radial-gradient(circle at 12% 28%, rgba(19,107,61,.08), transparent 42%),
+        radial-gradient(circle at 88% 68%, rgba(19,107,61,.06), transparent 46%),
+        radial-gradient(circle at 50% 115%, rgba(14,107,102,.05), transparent 55%),
+        linear-gradient(160deg, #F0F5ED 0%, #E8F0E4 35%, #F3EDE4 70%, #EDE7DC 100%);
 }
 
 /* ---------- FLEX CONTAINER PRINCIPAL ---------- */

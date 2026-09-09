@@ -1,8 +1,21 @@
 (function () {
   'use strict';
 
+  var isEN = document.documentElement.lang === 'en';
+
   var ENDPOINT = 'https://formsubmit.co/ajax/carolpy25m@gmail.com';
-  var SUBJECT = 'Mensaje desde el portafolio de Carol';
+  var SUBJECT = isEN ? 'Message from Carol\'s portfolio' : 'Mensaje desde el portafolio de Carol';
+
+  var MSG = {
+    nameEmpty:    isEN ? 'Enter your name.' : 'Escribe tu nombre.',
+    nameShort:    isEN ? 'Name must be at least 2 characters.' : 'El nombre debe tener al menos 2 caracteres.',
+    emailEmpty:   isEN ? 'Enter your email.' : 'Escribe tu correo electrónico.',
+    emailInvalid: isEN ? 'Enter a valid email, e.g.: name@domain.com' : 'Ingresa un correo válido, por ejemplo: nombre@dominio.com',
+    msgEmpty:     isEN ? 'Enter your message.' : 'Escribe tu mensaje.',
+    msgShort:     isEN ? 'Message must be at least 10 characters.' : 'El mensaje debe tener al menos 10 caracteres.',
+    success:      isEN ? 'Thank you! Your message was sent successfully. I\'ll get back to you soon.' : '¡Gracias! Tu mensaje llegó correctamente, te responderé pronto.',
+    error:        isEN ? 'An error occurred. Please try again or email me at carolpy25m@gmail.com.' : 'Ocurrió un error al enviar. Inténtalo de nuevo o escríbeme a carolpy25m@gmail.com.'
+  };
 
   var form = document.getElementById('contact-form');
   if (!form) return;
@@ -35,7 +48,7 @@
 
     var name = fields.name.value.trim();
     if (name.length < 2) {
-      setError(fields.name, name.length === 0 ? 'Escribe tu nombre.' : 'El nombre debe tener al menos 2 caracteres.');
+      setError(fields.name, name.length === 0 ? MSG.nameEmpty : MSG.nameShort);
       valid = false;
     } else {
       setError(fields.name, '');
@@ -43,7 +56,7 @@
 
     var email = fields.email.value.trim();
     if (!EMAIL_RE.test(email)) {
-      setError(fields.email, email.length === 0 ? 'Escribe tu correo electrónico.' : 'Ingresa un correo válido, por ejemplo: nombre@dominio.com');
+      setError(fields.email, email.length === 0 ? MSG.emailEmpty : MSG.emailInvalid);
       valid = false;
     } else {
       setError(fields.email, '');
@@ -51,7 +64,7 @@
 
     var message = fields.message.value.trim();
     if (message.length < 10) {
-      setError(fields.message, message.length === 0 ? 'Escribe tu mensaje.' : 'El mensaje debe tener al menos 10 caracteres.');
+      setError(fields.message, message.length === 0 ? MSG.msgEmpty : MSG.msgShort);
       valid = false;
     } else {
       setError(fields.message, '');
@@ -116,13 +129,13 @@
             f.closest('.field').classList.remove('has-error');
             document.getElementById(f.id + '-error').hidden = true;
           });
-          showStatus('¡Gracias! Tu mensaje llegó correctamente, te responderé pronto.', 'success');
+          showStatus(MSG.success, 'success');
         } else {
           throw new Error('formspree parsed false');
         }
       })
       .catch(function () {
-        showStatus('Ocurrió un error al enviar. Inténtalo de nuevo o escríbeme a carolpy25m@gmail.com.', 'error');
+        showStatus(MSG.error, 'error');
       })
       .finally(function () {
         setSubmitting(false);

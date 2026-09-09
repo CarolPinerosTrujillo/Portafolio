@@ -24,12 +24,16 @@
   border-radius:var(--radius-lg);
   padding:clamp(24px, 4vw, 48px);
   box-shadow:0 30px 60px rgba(0,0,0,.35);
-  transition:background .35s ease, border-color .35s ease;
+  transition:background .35s ease, border-color .35s ease, box-shadow .35s ease, transform .35s ease;
 }
 [data-theme="light"] .contact-card{
-  background:linear-gradient(160deg, rgba(255,255,255,.98), rgba(243,247,242,.98));
-  border-color:rgba(var(--line-rgb),.20);
-  box-shadow:0 20px 45px rgba(0,0,0,.08);
+  background:linear-gradient(160deg, rgba(107,63,160,.06) 0%, rgba(90,51,144,.09) 55%, rgba(237,232,223,.95) 100%);
+  border-color:rgba(107,63,160,.12);
+  box-shadow:0 20px 45px rgba(107,63,160,.06), 0 0 0 1px rgba(107,63,160,.04);
+}
+[data-theme="light"] .contact-card:hover{
+  box-shadow:0 24px 50px rgba(107,63,160,.10), 0 0 0 1px rgba(107,63,160,.06);
+  transform:translateY(-2px);
 }
 
 .contact-grid{
@@ -79,6 +83,14 @@
   border-radius:50%;
   background:rgba(var(--accent-rgb),.12);
   color:var(--color-accent);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+[data-theme="light"] .contact-icon{
+  background:rgba(107,63,160,.08);
+}
+.contact-icon:hover{
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(var(--accent-rgb),.2);
 }
 
 .contact-social{
@@ -94,9 +106,9 @@
   transition:all .25s ease;
 }
 .contact-social a:hover{
-  color:#fff;
+  color:var(--color-accent);
   border-color:var(--color-accent);
-  background:var(--color-accent);
+  background:rgba(107,63,160,.08);
   transform:translateY(-3px);
 }
 
@@ -120,12 +132,19 @@
   font-family:var(--font-body);
   font-size:14.5px;
   resize:vertical;
-  transition:border-color .2s ease, background .2s ease;
+  transition:border-color .25s ease, background .25s ease, box-shadow .25s ease;
 }
 [data-theme="light"] .field input,
 [data-theme="light"] .field textarea{
-  background:rgba(var(--accent-rgb),.05);
-  border-color:rgba(var(--line-rgb),.30);
+  background:rgba(107,63,160,.03);
+  border-color:rgba(107,63,160,.12);
+  transition:border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+[data-theme="light"] .field input:focus,
+[data-theme="light"] .field textarea:focus{
+  background:rgba(107,63,160,.06);
+  border-color:rgba(107,63,160,.35);
+  box-shadow:0 0 0 3px rgba(107,63,160,.08);
 }
 .field textarea{ min-height:110px; }
 
@@ -140,9 +159,9 @@
 }
 [data-theme="light"] .field input:-webkit-autofill,
 [data-theme="light"] .field textarea:-webkit-autofill{
-  -webkit-box-shadow:0 0 0 1000px #FBFDF9 inset;
-  box-shadow:0 0 0 1000px #FBFDF9 inset;
-  -webkit-text-fill-color:#18211B;
+  -webkit-box-shadow:0 0 0 1000px #FDFBF7 inset;
+  box-shadow:0 0 0 1000px #FDFBF7 inset;
+  -webkit-text-fill-color:#1A1E16;
 }
 
 .field input:focus,

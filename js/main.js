@@ -212,7 +212,8 @@
       e.preventDefault();
       var btn = form.querySelector('.contact-submit');
       var original = btn.innerHTML;
-      btn.innerHTML = '¡Gracias! &#10003;';
+      var isEN = document.documentElement.lang === 'en';
+      btn.innerHTML = isEN ? 'Thanks! &#10003;' : '&#10003;';
       btn.style.pointerEvents = 'none';
       setTimeout(function () {
         btn.innerHTML = original;

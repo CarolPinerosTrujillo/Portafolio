@@ -111,6 +111,22 @@
   .cursor-dot, .cursor-ring, .cursor-bolt, .cursor-flash{ display:none; }
 }
 
+/* Ocultar cursor custom cuando el lector de blog está abierto */
+body.reader-open .cursor-dot,
+body.reader-open .cursor-ring,
+body.reader-open .cursor-bolt{
+  display:none !important;
+}
+body.reader-open{
+  cursor:auto !important;
+}
+body.reader-open a,
+body.reader-open button,
+body.reader-open input,
+body.reader-open textarea{
+  cursor:auto !important;
+}
+
 /* ============================================================
    PARTÍCULAS DE ENERGÍA — canvas en el hero
    ============================================================ */

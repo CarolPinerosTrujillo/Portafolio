@@ -58,7 +58,10 @@
     var isOverLink = false;
 
     function cursorLoop() {
-      // velocidad "normal": el punto casi instantáneo, anillo y rayo siguen con pequeño retraso
+      if (document.body.classList.contains('reader-open')) {
+        raf = null;
+        return;
+      }
       dotX += (mx - dotX) * 0.55;
       dotY += (my - dotY) * 0.55;
       ringX += (mx - ringX) * 0.38;
@@ -75,12 +78,14 @@
     }
 
     document.addEventListener('mousemove', function (e) {
+      if (document.body.classList.contains('reader-open')) return;
       mx = e.clientX;
       my = e.clientY;
       if (!raf) raf = requestAnimationFrame(cursorLoop);
     });
 
     function checkOverLink(e) {
+      if (document.body.classList.contains('reader-open')) return;
       var target = e.target;
       while (target && target !== document.body) {
         if (
@@ -111,6 +116,7 @@
 
     /* ---- Trueno al hacer click ---- */
     document.addEventListener('mousedown', function (e) {
+      if (document.body.classList.contains('reader-open')) return;
       var flash = document.createElement('div');
       flash.className = 'cursor-flash';
       flash.style.color = '#F59E0B';

@@ -12,7 +12,9 @@
 }
 [data-theme="light"] .site-footer{
   background:
-    linear-gradient(180deg, #FBFDF9 0%, rgba(var(--accent-rgb),.7) 55%, rgba(var(--tech-rgb),.6) 100%);
+    radial-gradient(circle at 15% 0%, rgba(19,107,61,.05), transparent 50%),
+    radial-gradient(circle at 85% 0%, rgba(19,107,61,.04), transparent 50%),
+    linear-gradient(180deg, var(--color-bg-deep) 0%, rgba(19,107,61,.03) 100%);
 }
 .site-footer::before{
   content:"";

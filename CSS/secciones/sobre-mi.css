@@ -22,12 +22,16 @@
   border-radius:var(--radius-lg);
   padding:clamp(24px, 4vw, 44px);
   box-shadow:0 30px 60px rgba(0,0,0,.35);
-  transition:background .35s ease, border-color .35s ease;
+  transition:background .35s ease, border-color .35s ease, box-shadow .35s ease, transform .35s ease;
 }
 [data-theme="light"] .about-card{
-  background:linear-gradient(160deg, rgba(255,255,255,.98), rgba(243,247,242,.98));
-  border-color:rgba(var(--line-rgb),.20);
-  box-shadow:0 20px 45px rgba(0,0,0,.08);
+  background:linear-gradient(160deg, rgba(107,63,160,.05) 0%, rgba(90,51,144,.08) 55%, rgba(237,232,223,.95) 100%);
+  border-color:rgba(107,63,160,.12);
+  box-shadow:0 20px 45px rgba(107,63,160,.06), 0 0 0 1px rgba(107,63,160,.04);
+}
+[data-theme="light"] .about-card:hover{
+  box-shadow:0 24px 50px rgba(107,63,160,.10), 0 0 0 1px rgba(107,63,160,.06);
+  transform:translateY(-2px);
 }
 
 .about-grid{

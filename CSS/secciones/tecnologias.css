@@ -31,9 +31,9 @@
   transition:background .35s ease, border-color .35s ease;
 }
 [data-theme="light"] .tech-card{
-  background:linear-gradient(135deg, rgba(var(--accent-rgb),.09) 0%, rgba(var(--accent-2-rgb),.12) 55%, rgba(243,247,242,.95) 100%);
-  border-color:rgba(var(--line-rgb),.22);
-  box-shadow:0 16px 40px rgba(0,0,0,.08);
+  background:linear-gradient(135deg, rgba(var(--accent-rgb),.06) 0%, rgba(var(--accent-2-rgb),.08) 55%, #F5F1EA 100%);
+  border-color:rgba(60,50,35,.10);
+  box-shadow:0 16px 40px rgba(60,50,35,.06);
 }
 
 /* Layout: 3 columnas iguales */
@@ -59,10 +59,9 @@
   text-transform:uppercase;
   letter-spacing:.18em;
   font-size:clamp(11px, 1vw, 13px);
-  color:#e6e1f7;
+  color:var(--color-text-dim);
   font-weight:500;
 }
-[data-theme="light"] .tech-label{ color:var(--color-text-dim); }
 
 .tech-icons{
   display:flex;
@@ -96,7 +95,7 @@
   flex:0 0 auto;
   margin:0 4px;
 }
-[data-theme="light"] .tech-divider{ background:rgba(var(--line-rgb),.35); }
+[data-theme="light"] .tech-divider{ background:rgba(60,50,35,.15); }
 
 /* Data Analyst single */
 .tech-card-inner--single{

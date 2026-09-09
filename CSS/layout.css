@@ -17,11 +17,20 @@
   text-align:center;
   transition:transform .25s ease, border-color .25s ease, background .25s ease;
 }
-[data-theme="light"] .stat-box{ background:rgba(var(--accent-rgb),.06); }
 .stat-box:hover{
   transform:translateY(-4px);
   border-color:var(--color-energy);
   background:rgba(var(--energy-rgb),.06);
+}
+[data-theme="light"] .stat-box{
+  background:rgba(19,107,61,.04);
+  border-color:rgba(19,107,61,.10);
+  transition:transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+[data-theme="light"] .stat-box:hover{
+  background:rgba(19,107,61,.08);
+  border-color:rgba(19,107,61,.25);
+  box-shadow:0 8px 24px rgba(19,107,61,.08);
 }
 .stat-value{
   font-family:var(--font-mono);
