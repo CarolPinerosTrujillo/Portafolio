@@ -187,22 +187,34 @@
   }
 
   /* ============================================================
-     BARRA DE PROGRESO DEL TIMELINE — crece con el scroll
+     TIMELINE — tap-to-toggle en mobile
      ============================================================ */
-  var timeline = document.querySelector('.timeline');
-  var progressBar = document.querySelector('.timeline-progress');
+  var timelineItems = document.querySelectorAll('.timeline-item');
 
-  if (timeline && progressBar) {
-    function updateTimelineProgress() {
-      var rect = timeline.getBoundingClientRect();
-      var total = timeline.offsetHeight;
-      var start = rect.top > 0 ? 0 : Math.min(-rect.top, total);
-      var pct = Math.min(100, Math.max(0, (start / total) * 100));
-      progressBar.style.height = pct + '%';
+  timelineItems.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      var wasActive = item.classList.contains('is-active');
+
+      // Close all
+      timelineItems.forEach(function (el) {
+        el.classList.remove('is-active');
+      });
+
+      // Toggle clicked
+      if (!wasActive) {
+        item.classList.add('is-active');
+      }
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.timeline-item')) {
+      timelineItems.forEach(function (el) {
+        el.classList.remove('is-active');
+      });
     }
-    window.addEventListener('scroll', updateTimelineProgress, { passive: true });
-    updateTimelineProgress();
-  }
+  });
 
   /* ============================================================
      CONTACTO — formulario: prevenir envío y dar feedback
