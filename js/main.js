@@ -193,6 +193,7 @@
 
   timelineItems.forEach(function (item) {
     item.addEventListener('click', function (e) {
+      e.stopPropagation();
       var wasActive = item.classList.contains('is-active');
 
       // Close all
@@ -215,6 +216,35 @@
       });
     }
   });
+
+  /* ============================================================
+     TIMELINE — barra de progreso con scroll
+     ============================================================ */
+  var timeline = document.querySelector('.timeline');
+  var progressBar = document.querySelector('.timeline-progress');
+
+  if (timeline && progressBar) {
+    function updateTimelineProgress() {
+      var rect = timeline.getBoundingClientRect();
+      var total = timeline.offsetHeight;
+      var viewH = window.innerHeight;
+      var scrolled = viewH - rect.top;
+      var range = total + viewH;
+      var pct = Math.min(100, Math.max(0, (scrolled / range) * 100));
+
+      var isMobile = window.innerWidth <= 600;
+      if (isMobile) {
+        progressBar.style.width = '2px';
+        progressBar.style.height = pct + '%';
+      } else {
+        progressBar.style.height = '2px';
+        progressBar.style.width = pct + '%';
+      }
+    }
+    window.addEventListener('scroll', updateTimelineProgress, { passive: true });
+    window.addEventListener('resize', updateTimelineProgress, { passive: true });
+    updateTimelineProgress();
+  }
 
   /* ============================================================
      CONTACTO — formulario: prevenir envío y dar feedback
