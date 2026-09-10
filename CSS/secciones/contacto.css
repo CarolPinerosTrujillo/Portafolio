@@ -27,9 +27,9 @@
   transition:background .35s ease, border-color .35s ease, box-shadow .35s ease, transform .35s ease;
 }
 [data-theme="light"] .contact-card{
-  background:linear-gradient(160deg, rgba(107,63,160,.06) 0%, rgba(90,51,144,.09) 55%, rgba(237,232,223,.95) 100%);
-  border-color:rgba(107,63,160,.12);
-  box-shadow:0 20px 45px rgba(107,63,160,.06), 0 0 0 1px rgba(107,63,160,.04);
+  background:linear-gradient(160deg, rgba(107,63,160,0.3) 0%, rgba(90,51,144,0.1) 55%, rgba(237,232,223,0.95) 90%);
+  border-color:rgba(107,63,160,.3);
+  box-shadow:0 20px 45px rgba(107,63,160,.06), 0 0 0 1px rgba(107,63,160,.1);
 }
 [data-theme="light"] .contact-card:hover{
   box-shadow:0 24px 50px rgba(107,63,160,.10), 0 0 0 1px rgba(107,63,160,.06);
@@ -271,6 +271,12 @@
   .contact-grid{
     grid-template-columns:1fr;
   }
+  .contact-lead{ font-size:14px; }
+  .contact-list li{ font-size:13.5px; }
+  .field input, .field textarea{ font-size:14px; }
+  .field label{ font-size:13px; }
+  .contact-submit{ font-size:13px; }
+  .contact-form-status{ font-size:12.5px; }
 }
 @media (max-width:480px){
   .contact-card{ padding:22px 18px; }

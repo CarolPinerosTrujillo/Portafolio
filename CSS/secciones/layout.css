@@ -91,9 +91,13 @@
 [data-theme="light"] .stat-100{ border-color:rgba(var(--energy-rgb),.35); }
 
 /* ---------- Responsive ---------- */
-@media (max-width:600px){
+@media (max-width:992px){
   .about-stats{
     grid-template-columns:repeat(2, 1fr);
+  }
+}
+@media (max-width:600px){
+  .about-stats{
     gap:10px;
   }
   .stat-box{ padding:14px 8px 12px; }

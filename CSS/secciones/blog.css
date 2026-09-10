@@ -57,7 +57,7 @@
   transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease, background .3s ease;
 }
 [data-theme="light"] .blog-card{
-  background:linear-gradient(160deg, rgba(154,82,13,.04) 0%, rgba(154,82,13,.07) 40%, rgba(237,232,223,.95) 100%);
+  background:linear-gradient(160deg, rgba(154,82,13,.04) 0%, rgba(154,82,13,.07) 40%, rgba(206, 189, 158, 0.95) 100%);
   border-color:rgba(154,82,13,.10);
 }
 [data-theme="light"] .blog-card:hover{

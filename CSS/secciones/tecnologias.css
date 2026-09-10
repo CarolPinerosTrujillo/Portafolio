@@ -31,7 +31,7 @@
   transition:background .35s ease, border-color .35s ease;
 }
 [data-theme="light"] .tech-card{
-  background:linear-gradient(135deg, rgba(var(--accent-rgb),.06) 0%, rgba(var(--accent-2-rgb),.08) 55%, #F5F1EA 100%);
+  background:linear-gradient(135deg, rgba(var(--accent-rgb),.2) 0%, rgba(var(--accent-2-rgb),.08) 100%, #a7a7df 100%);
   border-color:rgba(60,50,35,.10);
   box-shadow:0 16px 40px rgba(60,50,35,.06);
 }

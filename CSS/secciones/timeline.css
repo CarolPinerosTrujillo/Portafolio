@@ -4,8 +4,8 @@
 .timeline-section{
   position:relative;
   background:
-    radial-gradient(circle at 80% 10%, rgba(var(--energy-rgb),.10), transparent 45%),
-    radial-gradient(circle at 10% 90%, rgba(var(--tech-rgb),.10), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgba(var(--energy-rgb),.10), transparent 90%),
+    radial-gradient(circle at 10% 90%, rgba(var(--tech-rgb),.10), transparent 90%),
     var(--color-bg-deep);
   padding:var(--space-section) 0 calc(var(--space-section) + 180px);
   overflow:visible;
@@ -198,9 +198,8 @@
   pointer-events:none;
 }
 
-[data-theme="light"] .timeline-card{
-  background:linear-gradient(160deg, rgba(107,63,160,.04) 0%, rgba(90,51,144,.06) 40%, rgba(245,241,234,.98) 100%);
-  border-color:rgba(107,63,160,.10);
+[data-theme="light"] .timeline-card{  background: linear-gradient( 160deg,#ffffff 0%,  #d0f1c8 45%, rgba(var(--warm-rgb),.5) 100% );
+  border: 1px solid rgba(107,63,160,.15);
 }
 
 /* Arrow */
