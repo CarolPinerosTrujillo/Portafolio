@@ -18,7 +18,6 @@
       var stored = localStorage.getItem(STORAGE_KEY);
       if (stored) return stored;
     } catch (_) {}
-    if (window.matchMedia('(prefers-color-scheme: light)').matches) return 'light';
     return 'dark';
   }
 
