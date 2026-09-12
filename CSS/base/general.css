@@ -79,6 +79,9 @@ button:focus-visible,
 #sobre-mi p{
   line-height:1.9;
   font-size:1.05rem;
+  color:rgba(255,255,255,.82);
+}
+[data-theme="light"] #sobre-mi p{
   color:var(--color-text-dim);
 }
 

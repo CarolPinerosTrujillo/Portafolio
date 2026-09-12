@@ -197,6 +197,37 @@
 [data-theme="light"] .proj-link:hover{ color:var(--accent-blue); }
 .proj-link:hover .arrow{ transform:translateX(5px); }
 
+/* ---------- Actions row (GitHub + Ver proyecto) ---------- */
+.proj-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.proj-github{
+  display:inline-flex;
+  text-decoration:none;
+  transition:transform .3s ease, filter .3s ease;
+}
+.proj-github-icon{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  object-fit:cover;
+  filter:grayscale(.2) brightness(.9) drop-shadow(0 0 4px rgba(var(--accent-rgb),.35));
+  transition:filter .3s ease, transform .3s ease;
+}
+.proj-github:hover .proj-github-icon{
+  filter:grayscale(0) brightness(1.1) drop-shadow(0 0 8px rgba(var(--energy-rgb),.6));
+  transform:translateY(-3px) scale(1.1);
+}
+[data-theme="light"] .proj-github-icon{
+  filter:grayscale(0) brightness(1) drop-shadow(0 0 3px rgba(var(--accent-rgb),.15));
+}
+[data-theme="light"] .proj-github:hover .proj-github-icon{
+  filter:grayscale(0) brightness(1) drop-shadow(0 0 8px rgba(var(--accent-rgb),.45));
+}
+
 /* ---------- Tabs al hover ---------- */
 .proj-thumb::after{
   content:"";
