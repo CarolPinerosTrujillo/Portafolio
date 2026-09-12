@@ -179,6 +179,31 @@
     border-color:var(--accent-blue);
 }
 
+/* ---------- CV download — verde energía ---------- */
+.btn-cv{
+    border:1px solid rgba(var(--energy-rgb),.4);
+    color:var(--color-energy);
+    background:rgba(var(--energy-rgb),.04);
+}
+.btn-cv svg{ flex-shrink:0; }
+.btn-cv:hover{
+    background:rgba(var(--energy-rgb),.12);
+    border-color:var(--color-energy);
+    color:var(--color-energy);
+    transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(var(--energy-rgb),.2);
+}
+[data-theme="light"] .btn-cv{
+    border-color:rgba(var(--energy-rgb),.5);
+    color:var(--color-energy);
+    background:rgba(var(--energy-rgb),.06);
+}
+[data-theme="light"] .btn-cv:hover{
+    background:rgba(var(--energy-rgb),.14);
+    border-color:var(--color-energy);
+    box-shadow:0 8px 24px rgba(var(--energy-rgb),.15);
+}
+
 /* ---------- FOTO ---------- */
 .photo-card{
     position:relative;
