@@ -76,8 +76,8 @@
 }
 [data-theme="light"] .sidebar{
   background:
-    linear-gradient(200deg, rgba(var(--accent-2-rgb),.06), rgba(var(--accent-rgb),.04)),
-    rgba(245,241,234,.92);
+    linear-gradient(200deg, rgba(var(--accent-2-rgb),.14), rgba(var(--accent-rgb),.10)),
+    rgba(248,243,234,.92);
 }
 
 .sidebar-brand{

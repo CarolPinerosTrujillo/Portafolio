@@ -195,7 +195,7 @@ button:focus-visible,
 
 /* Light mode — more visible */
 [data-theme="light"] .has-particles::before{
-  opacity:.35;
+  opacity:.55;
   background:var(--color-energy);
   box-shadow:
     18px 8px 0 1px var(--color-accent),
@@ -204,7 +204,7 @@ button:focus-visible,
     30px 20px 0 1px var(--color-energy-2);
 }
 [data-theme="light"] .has-particles::after{
-  opacity:.32;
+  opacity:.50;
   background:var(--color-accent);
   box-shadow:
     22px -6px 0 0px var(--color-tech),

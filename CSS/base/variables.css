@@ -55,37 +55,37 @@
   --line:rgba(255,255,255,.12);
 }
 
-/* ---- TEMA CLARO — "papel terminal": verde + lila a tonos del dark ---- */
+/* ---- TEMA CLARO — colores intensos + fondos cálidos vibrantes ---- */
 [data-theme="light"]{
-  --color-bg-deep:#F5F1EA;
-  --color-bg-mid:#FDFBF7;
-  --color-bg-card:#EDE8DF;
-  --color-accent:#6B3FA0;   /* lila — contraste ≥4.5:1 vs cream */
-  --color-accent-2:#5A3390; /* lila profundo */
-  --color-text:#1A1E16;
-  --color-text-dim:#4A5548; /* verde-gris oscuro — contraste ≥4.5:1 */
-  --color-line:rgba(60,50,35,.12);
+  --color-bg-deep:#E8E1D3;
+  --color-bg-mid:#F8F3EA;
+  --color-bg-card:#E4DDD0;
+  --color-accent:#9452D3;   /* lila vibrante +20% */
+  --color-accent-2:#7F46BE; /* lila profundo +20% */
+  --color-text:#111510;
+  --color-text-dim:#303E2E; /* verde-gris alto contraste */
+  --color-line:rgba(50,40,30,.22);
 
-  --color-energy:#136B3D;   /* verde terminal oscuro */
-  --color-energy-2:#1E7D4C;
-  --color-warm:#9A520D;     /* ámbar oscuro */
-  --color-tech:#0E6B66;     /* teal oscuro */
-  --color-tech-2:#157A74;
+  --color-energy:#10A656;   /* verde vivo +20% */
+  --color-energy-2:#18CA6C;
+  --color-warm:#DD760C;     /* ámbar vibrante +20% */
+  --color-tech:#0EA097;     /* teal intenso +20% */
+  --color-tech-2:#16C1B9;
 
-  --accent-rgb:107,63,160;
-  --accent-2-rgb:90,51,144;
-  --energy-rgb:19,107,61;
-  --energy-2-rgb:30,125,76;
-  --warm-rgb:154,82,13;
-  --tech-rgb:14,107,102;
-  --tech-2-rgb:21,122,116;
-  --line-rgb:60,50,35;
+  --accent-rgb:148,82,211;
+  --accent-2-rgb:127,70,190;
+  --energy-rgb:16,166,86;
+  --energy-2-rgb:24,202,108;
+  --warm-rgb:221,118,12;
+  --tech-rgb:14,160,151;
+  --tech-2-rgb:22,193,185;
+  --line-rgb:50,40,30;
 
-  --cursor-glow:rgba(var(--energy-rgb),.22);
+  --cursor-glow:rgba(var(--energy-rgb),.36);
 
-  --accent-blue:#6B3FA0;
-  --accent-violet:#5A3390;
-  --text-main:#1A1E16;
-  --text-dim:#4A5548;
-  --line:rgba(60,50,35,.12);
+  --accent-blue:#9452D3;
+  --accent-violet:#7F46BE;
+  --text-main:#111510;
+  --text-dim:#303E2E;
+  --line:rgba(50,40,30,.22);
 }

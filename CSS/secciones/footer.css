@@ -12,9 +12,9 @@
 }
 [data-theme="light"] .site-footer{
   background:
-    radial-gradient(circle at 15% 0%, rgba(19,107,61,.05), transparent 50%),
-    radial-gradient(circle at 85% 0%, rgba(19,107,61,.04), transparent 50%),
-    linear-gradient(180deg, var(--color-bg-deep) 0%, rgba(19,107,61,.03) 100%);
+    radial-gradient(circle at 15% 0%, rgba(16,166,86,.20), transparent 50%),
+    radial-gradient(circle at 85% 0%, rgba(148,82,211,.21), transparent 50%),
+    linear-gradient(180deg, var(--color-bg-deep) 0%, rgba(16,166,86,.11) 100%);
 }
 .site-footer::before{
   content:"";

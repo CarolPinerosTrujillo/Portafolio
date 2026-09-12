@@ -198,8 +198,8 @@
   pointer-events:none;
 }
 
-[data-theme="light"] .timeline-card{  background: linear-gradient( 160deg,#ffffff 0%,  #d0f1c8 45%, rgba(var(--warm-rgb),.5) 100% );
-  border: 1px solid rgba(107,63,160,.15);
+[data-theme="light"] .timeline-card{  background: linear-gradient( 160deg,#ffffff 0%,  #b0e8a6 45%, rgba(var(--accent-rgb),.52) 100% );
+  border: 1px solid rgba(148,82,211,.28);
 }
 
 /* Arrow */

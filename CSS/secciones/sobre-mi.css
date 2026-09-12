@@ -25,12 +25,12 @@
   transition:background .35s ease, border-color .35s ease, box-shadow .35s ease, transform .35s ease;
 }
 [data-theme="light"] .about-card{
-  background:linear-gradient(160deg, rgba(107,63,160,.05) 0%, rgba(90,51,144,.08) 55%, rgba(237,232,223,.95) 100%);
-  border-color:rgba(107,63,160,.12);
-  box-shadow:0 20px 45px rgba(107,63,160,.06), 0 0 0 1px rgba(107,63,160,.04);
+  background:linear-gradient(160deg, rgba(148,82,211,.10) 0%, rgba(127,70,190,.16) 55%, rgba(248,243,234,.95) 100%);
+  border-color:rgba(148,82,211,.28);
+  box-shadow:0 20px 45px rgba(148,82,211,.14), 0 0 0 1px rgba(148,82,211,.08);
 }
 [data-theme="light"] .about-card:hover{
-  box-shadow:0 24px 50px rgba(107,63,160,.10), 0 0 0 1px rgba(107,63,160,.06);
+  box-shadow:0 24px 50px rgba(148,82,211,.20), 0 0 0 1px rgba(148,82,211,.14);
   transform:translateY(-2px);
 }
 
@@ -79,6 +79,9 @@
 }
 [data-theme="light"] .about-text p:first-child{
   color:var(--color-text);
+}
+[data-theme="light"] #sobre-mi p{
+  color:var(--color-text-dim);
 }
 
 /* -------- responsive -------- */

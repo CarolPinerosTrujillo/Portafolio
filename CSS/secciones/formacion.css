@@ -134,14 +134,15 @@
 
 /* --- Light Theme --- */
 [data-theme="light"] .training-card{
-  background:#FAFAF6;
-  border-color:rgba(60,50,35,.10);
+  background:#F0EAE0;
+  border-color:rgba(var(--energy-rgb),.26);
 }
 
 [data-theme="light"] .training-card:hover{
-  border-color:rgba(var(--energy-rgb),.45);
+  border-color:rgba(var(--energy-rgb),.72);
+  box-shadow:0 8px 24px rgba(var(--energy-rgb),.16);
 }
 
 [data-theme="light"] .training-icon{
-  background:rgba(var(--energy-rgb),.15);
+  background:rgba(var(--energy-rgb),.28);
 }

@@ -23,11 +23,11 @@
     --scene-desk-lo:#0C0A07;
 }
 [data-theme="light"]{
-    --accent-blue:#6B3FA0;
-    --accent-violet:#5A3390;
-    --text-main:#1A1E16;
-    --text-dim:#4A5548;
-    --line:rgba(60,50,35,.12);
+    --accent-blue:#9452D3;
+    --accent-violet:#7F46BE;
+    --text-main:#111510;
+    --text-dim:#303E2E;
+    --line:rgba(50,40,30,.22);
 }
 
 /* ============ BANNER ============ */
@@ -48,10 +48,10 @@
 [data-theme="light"] .banner{
     color:var(--text-main);
     background:
-        radial-gradient(circle at 12% 28%, rgba(19,107,61,.08), transparent 42%),
-        radial-gradient(circle at 88% 68%, rgba(19,107,61,.06), transparent 46%),
-        radial-gradient(circle at 50% 115%, rgba(14,107,102,.05), transparent 55%),
-        linear-gradient(160deg, #F0F5ED 0%, #E8F0E4 35%, #F3EDE4 70%, #EDE7DC 100%);
+        radial-gradient(circle at 12% 28%, rgba(16,166,86,.23), transparent 42%),
+        radial-gradient(circle at 88% 68%, rgba(14,160,151,.21), transparent 46%),
+        radial-gradient(circle at 50% 115%, rgba(148,82,211,.13), transparent 55%),
+        linear-gradient(160deg, #F0F5ED 0%, #E4EDE0 35%, #F3EDE4 70%, #EDE7DC 100%);
 }
 
 /* ---------- FLEX CONTAINER PRINCIPAL ---------- */
@@ -163,9 +163,9 @@
     background:rgba(255,255,255,.02);
 }
 [data-theme="light"] .btn-outline-cta{
-    border-color:var(--line);
-    color:var(--text-main);
-    background:rgba(255,255,255,.5);
+    border-color:var(--accent-blue);
+    color:var(--accent-blue);
+    background:rgba(255,255,255,.7);
 }
 .btn-outline-cta:hover{
     background:rgba(255,255,255,.08);
@@ -174,7 +174,7 @@
     border-color:var(--accent-blue);
 }
 [data-theme="light"] .btn-outline-cta:hover{
-    background:rgba(var(--accent-rgb),.08);
+    background:rgba(var(--accent-rgb),.18);
     color:var(--accent-blue);
     border-color:var(--accent-blue);
 }
