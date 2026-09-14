@@ -11,6 +11,11 @@
   overflow:visible;
 }
 
+.timeline-section .container{
+  position:relative;
+  z-index:20;
+}
+
 .timeline-eyebrow{
   text-align:center;
   letter-spacing:.5em;
@@ -41,7 +46,7 @@
   position:relative;
   max-width:1100px;
   margin:0 auto;
-  padding:160px 20px 120px;
+  padding:180px 20px 120px;
   overflow:visible;
   min-height:300px;
 }
@@ -215,7 +220,7 @@
 
 /* Odd items: card above */
 .timeline-item:nth-child(odd) .timeline-card{
-  bottom:calc(100% + 16px);
+  bottom:calc(100% + 10px);
   top:auto;
 }
 .timeline-item:nth-child(odd) .timeline-card::after{
