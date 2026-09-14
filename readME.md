@@ -29,15 +29,23 @@ Mechanical engineer transitioning to full stack development. I build clean, scal
 
 ### AgendaPets
 Booking management for a dog grooming salon. Appointments, clients, and schedule availability with Java, Spring Boot, and PostgreSQL.
-[Live Demo](https://agendapets.github.io/AgendaPets/) · [Source](https://github.com/CarolPinerosTrujillo)
+[Live Demo](https://agendapets.github.io/AgendaPets/) · [Source](https://github.com/AgendaPets)
 
-### Dashboard Energía
-Power BI dashboard for energy consumption analysis and report generation with data visualization.
-*Private project — demo available upon request*
+### Coworking API
+REST API for managing coworking spaces. Allows managing locations, categories, and workspaces with full CRUD operations.
+[Source](https://github.com/CarolPinerosTrujillo/Coworking_API_Java)
+
+### Task Planner
+Personal task management with full CRUD, LocalStorage persistence, and visual organization by status.
+[Live Demo](https://carolpinerostrujillo.github.io/Web_planificadorTareas/) · [Source](https://github.com/CarolPinerosTrujillo/Web_planificadorTareas)
 
 ### Web Huerta Hayuelos
 Informative website about the Hayuelos community garden, composting processes, and crops.
-[Live Demo](https://carolpinerostrujillo.github.io/HuertaComunitaria/) · [Source](https://github.com/CarolPinerosTrujillo)
+[Live Demo](https://carolpinerostrujillo.github.io/HuertaComunitaria/) · [Source](https://github.com/CarolPinerosTrujillo/HuertaComunitaria)
+
+### La Fiesta Mexicana
+Landing page for a Mexican-Colombian fusion restaurant with shopping cart, dynamic pagination, and 3D animations.
+[Live Demo](https://carolpinerostrujillo.github.io/Hackaton-Landingpage-LaFiestaMex/) · [Source](https://github.com/CarolPinerosTrujillo/Hackaton-Landingpage-LaFiestaMex)
 
 ---
 
