@@ -7,21 +7,29 @@
 
 ---
 
-## About Me | Sobre Mí
-
-**ES:**
-Ingeniera mecánica en transición hacia el desarrollo full stack. Construyo soluciones limpias y escalables con Java y Spring Boot, combinando pensamiento analítico con curiosidad por los datos y la eficiencia energética. Disfruto construir soluciones que combinan lógica, rendimiento y propósito, desde APIs robustas hasta sistemas que transforman datos en decisiones.
+## Full Stack Developer & Mechanical Engineer | Desarrolladora Full Stack e Ingeniera Mecánica
 
 **EN:**
-Mechanical engineer transitioning to full stack development. I build clean, scalable solutions with Java and Spring Boot, combining analytical thinking with a curiosity for data and energy efficiency. I enjoy building solutions that combine logic, performance, and purpose — from robust APIs to systems that turn data into decisions.
+Full Stack Developer focused on Java and Spring Boot. Mechanical engineer who applies systemic thinking to write clean and scalable code. Passionate about building applications from start to finish, connecting backend logic with attractive and interactive frontend interfaces.
+
+**ES:**
+Desarrolladora Full Stack con enfoque en Java y Spring Boot. Ingeniera mecánica que aplica pensamiento sistémico para escribir código limpio y escalable. Apasionada por construir aplicaciones de principio a fin, conectando la lógica del backend con interfaces atractivas e interactivas en el frontend.
 
 ---
 
 ## Tech Stack
 
-| Backend | Frontend | Tools | Data |
-|---|---|---|---|
-| Java · Spring Boot · PostgreSQL | JavaScript · HTML5 · CSS3 · Bootstrap | Git · GitHub · IntelliJ IDEA | Power BI · Python |
+### Backend
+Java · Spring Boot · PostgreSQL · MongoDB · IntelliJ IDEA
+
+### Frontend
+JavaScript · HTML5 · CSS3 · Bootstrap
+
+### Tools
+Git · GitHub
+
+### Data Analyst
+Python · Power BI
 
 ---
 
@@ -29,48 +37,38 @@ Mechanical engineer transitioning to full stack development. I build clean, scal
 
 ### AgendaPets
 Booking management for a dog grooming salon. Appointments, clients, and schedule availability with Java, Spring Boot, and PostgreSQL.
-[Live Demo](https://agendapets.github.io/AgendaPets/) · [Source](https://github.com/AgendaPets)
+**Stack:** Java · Spring Boot · PostgreSQL · JavaScript · HTML · CSS · Bootstrap · Git · GitHub
+[Live Demo](https://agenda-pets-pi.vercel.app/) · [Source](https://github.com/AgendaPets)
 
 ### Coworking API
 REST API for managing coworking spaces. Allows managing locations, categories, and workspaces with full CRUD operations.
+**Stack:** Java · Spring Boot · PostgreSQL · JavaScript · HTML · CSS · Git · GitHub
 [Source](https://github.com/CarolPinerosTrujillo/Coworking_API_Java)
 
-### Task Planner
-Personal task management with full CRUD, LocalStorage persistence, and visual organization by status.
+### PlannerAPP CP — Task Planner
+Task manager with CRUD, status filters, and data persistence. Backend built with Java and Spring Boot.
+**Stack:** HTML · CSS · JS · LocalStorage · Bootstrap · Java · Spring Boot
 [Live Demo](https://carolpinerostrujillo.github.io/Web_planificadorTareas/) · [Source](https://github.com/CarolPinerosTrujillo/Web_planificadorTareas)
 
 ### Web Huerta Hayuelos
-Informative website about the Hayuelos community garden, composting processes, and crops.
+Informative website about the history and activities of the Hayuelos community garden, composting processes, and crops.
+**Stack:** HTML · CSS · JS
 [Live Demo](https://carolpinerostrujillo.github.io/HuertaComunitaria/) · [Source](https://github.com/CarolPinerosTrujillo/HuertaComunitaria)
 
 ### La Fiesta Mexicana
-Landing page for a Mexican-Colombian fusion restaurant with shopping cart, dynamic pagination, and 3D animations.
+Landing page for a Mexican-Colombian fusion restaurant with shopping cart, dynamic menu, and responsive design.
+**Stack:** HTML · CSS · JS · Bootstrap · SweetAlert2
 [Live Demo](https://carolpinerostrujillo.github.io/Hackaton-Landingpage-LaFiestaMex/) · [Source](https://github.com/CarolPinerosTrujillo/Hackaton-Landingpage-LaFiestaMex)
 
 ---
 
-## Complementary Training
+## Complementary Training | Formación Complementaria
 
 | Course | Institution | Hours | Year |
 |---|---|---|---|
 | Software Development — Mobile Apps | Universidad del Bosque / MinTIC | 800h | 2021 |
 | MySQL Database Construction | SENA Colombia | 48h | 2026 |
 | ISO 50001:2018 Internal Auditor — Energy Management | SGS Academy Colombia | 40h | 2025 |
-
----
-
-## Currently Learning
-
-- REST API Design
-- Spring Security
-- Docker
-- AWS Cloud
-
----
-
-## Design
-
-This portfolio was designed in [Figma](https://www.figma.com/design/TOMiRdpbUHgDdO5N1YU8NA/PORTAFOLIO) with color and tone refinements applied during development for improved accessibility and visual consistency.
 
 ---
 
