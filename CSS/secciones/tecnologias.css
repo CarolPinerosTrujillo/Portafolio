@@ -128,7 +128,7 @@
   .tech-icons img{ height:30px; }
   .tech-card-inner--single{
     flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
     gap:16px;
   }
 }
