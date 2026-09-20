@@ -89,20 +89,29 @@
   .about-grid{
     grid-template-columns:200px 1fr;
   }
-  #sobre-mi .about-text p{ font-size:0.85rem; line-height:1.7; }
+  #sobre-mi .about-text p{ font-size:0.82rem; line-height:1.7; }
 }
 @media (max-width:768px){
   .about-grid{
     grid-template-columns:1fr;
+    gap:20px;
+  }
+  .about-card{
+    padding:18px;
   }
   .about-photo-wrap{
-    width:220px;
-    max-width:220px;
-    margin:0 auto 8px;
+    width:160px;
+    max-width:160px;
+    margin:0 auto 4px;
   }
   .about-photo{
     aspect-ratio:1/1;
-    min-height:220px;
+    min-height:160px;
   }
   .about-photo-wrap::after{ display:none; }
+  .about-text p{
+    font-size:0.82rem;
+    line-height:1.7;
+    margin-bottom:12px;
+  }
 }

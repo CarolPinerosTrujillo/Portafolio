@@ -94,14 +94,17 @@
 @media (max-width:992px){
   .about-stats{
     grid-template-columns:repeat(2, 1fr);
+    gap:10px;
   }
 }
 @media (max-width:600px){
   .about-stats{
-    gap:10px;
+    gap:8px;
   }
-  .stat-box{ padding:14px 8px 12px; }
-  .stat-value{ font-size:22px; }
-  .stat-100{ padding:16px; }
-  .stat-100-text{ font-size:13px; }
+  .stat-box{ padding:10px 6px 8px; }
+  .stat-value{ font-size:20px; }
+  .stat-label{ font-size:9px; }
+  .stat-100{ padding:12px 14px; }
+  .stat-100-value{ font-size:24px; }
+  .stat-100-text{ font-size:12px; }
 }

@@ -270,16 +270,34 @@
 @media (max-width:900px){
   .contact-grid{
     grid-template-columns:1fr;
+    gap:28px;
   }
-  .contact-lead{ font-size:14px; }
+  .contact-card{ padding:clamp(20px, 3vw, 36px); }
+  .contact-lead{ font-size:14px; margin-bottom:18px; }
+  .contact-list{ gap:12px; margin-bottom:20px; }
   .contact-list li{ font-size:13.5px; }
-  .field input, .field textarea{ font-size:14px; }
+  .contact-form-col{ gap:16px; }
+  .field input, .field textarea{ font-size:14px; padding:14px 12px 7px; }
   .field label{ font-size:13px; }
-  .contact-submit{ font-size:13px; }
-  .contact-form-status{ font-size:12.5px; }
+  .field textarea{ min-height:90px; }
+  .contact-submit{ font-size:13px; padding:12px 22px; }
+  .contact-form-status{ font-size:12.5px; padding:10px 12px; }
 }
 @media (max-width:480px){
-  .contact-card{ padding:22px 18px; }
+  .contact-card{ padding:16px 14px; }
+  .contact-grid{ gap:22px; }
+  .contact-lead{ font-size:13px; margin-bottom:14px; }
+  .contact-list{ gap:10px; margin-bottom:16px; }
+  .contact-list li{ font-size:12.5px; gap:10px; }
+  .contact-icon{ width:30px; height:30px; }
+  .contact-icon svg{ width:15px; height:15px; }
+  .contact-social{ gap:10px; }
+  .contact-social a{ width:34px; height:34px; }
+  .contact-form-col{ gap:14px; }
+  .field input, .field textarea{ font-size:13px; padding:12px 10px 6px; }
+  .field label{ font-size:12px; }
+  .field textarea{ min-height:80px; }
+  .contact-submit{ font-size:12px; padding:11px 20px; }
 }
 
 @keyframes arrow-move{

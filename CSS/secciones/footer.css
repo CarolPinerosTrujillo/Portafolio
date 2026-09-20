@@ -138,11 +138,33 @@
 
 /* -------- responsive -------- */
 @media (max-width:768px){
+  .site-footer{ padding-top:36px; }
   .footer-top{
     grid-template-columns:1fr;
-    gap:28px;
+    gap:24px;
+    padding-bottom:24px;
   }
-  .footer-bottom{
-    flex-direction:column;
-  }
+  .footer-logo{ width:72px; height:72px; margin-bottom:8px; }
+  .footer-brand{ font-size:18px; margin-bottom:6px; }
+  .footer-tagline{ font-size:12.5px; line-height:1.6; margin-bottom:12px; }
+  .footer-social a{ width:30px; height:30px; }
+  .footer-social a svg{ width:15px; height:15px; }
+  .footer-links-col, .footer-contact-col{ gap:8px; }
+  .footer-heading{ font-size:10.5px; margin-bottom:2px; }
+  .footer-links-col a, .footer-contact-col a, .footer-plain{ font-size:12.5px; }
+  .footer-bottom{ padding:14px 0; font-size:11px; gap:6px; }
+}
+@media (max-width:480px){
+  .site-footer{ padding-top:28px; }
+  .footer-top{ gap:20px; padding-bottom:20px; }
+  .footer-logo{ width:60px; height:60px; margin-bottom:6px; }
+  .footer-brand{ font-size:16px; margin-bottom:4px; }
+  .footer-tagline{ font-size:11.5px; margin-bottom:10px; }
+  .footer-social{ gap:8px; }
+  .footer-social a{ width:28px; height:28px; }
+  .footer-social a svg{ width:14px; height:14px; }
+  .footer-links-col, .footer-contact-col{ gap:6px; }
+  .footer-heading{ font-size:10px; }
+  .footer-links-col a, .footer-contact-col a, .footer-plain{ font-size:11.5px; }
+  .footer-bottom{ padding:12px 0; font-size:10.5px; }
 }
