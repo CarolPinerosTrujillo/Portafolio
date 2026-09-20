@@ -116,6 +116,22 @@
 .proj-thumb--planner{ background:linear-gradient(135deg, #6366f1 0%, #3b82f6 100%); }
 .proj-thumb--fiesta{ background:linear-gradient(135deg, #dc2626 0%, #f59e0b 100%); }
 
+/* link clickeable en la imagen del proyecto */
+.proj-thumb-link{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  width:100%;
+  line-height:0;
+}
+.proj-thumb-link .proj-thumb{
+  width:100%;
+}
+.proj-thumb-link:focus-visible .proj-thumb{
+  outline:2px solid var(--color-accent);
+  outline-offset:2px;
+}
+
 .proj-icon{
   width:34%;
   color:rgba(255,255,255,.9);
