@@ -181,7 +181,7 @@
   display:flex;
   flex-wrap:wrap;
   gap:6px;
-  margin-bottom:10px;
+  margin-bottom:0;
 }
 .chip{
   font-family:var(--font-mono);
@@ -201,7 +201,7 @@
 
 .proj-link{
   font-family:var(--font-mono);
-  font-size:12px;
+  font-size:12.5px;
   letter-spacing:.1em;
   color:var(--accent-blue);
   text-decoration:none;
@@ -211,39 +211,25 @@
   width:fit-content;
 }
 .proj-link .arrow{ transition:transform .25s ease; }
+.proj-link > span:first-child{ transition:transform .25s ease; }
 .proj-link:hover{ color:#fff; }
 [data-theme="light"] .proj-link:hover{ color:var(--accent-blue); }
 .proj-link:hover .arrow{ transform:translateX(5px); }
+.proj-link:hover > span:first-child{ transform:translateX(3px); }
 
-/* ---------- Actions row (GitHub + Ver proyecto) ---------- */
+/* ---------- Actions row (Ver en GitHub + Ver demo) ---------- */
 .proj-actions{
   display:flex;
   align-items:center;
-  gap:14px;
+  justify-content:flex-start;
+  gap:0;
   flex-wrap:wrap;
+  margin-top:14px;
 }
-.proj-github{
-  display:inline-flex;
-  text-decoration:none;
-  transition:transform .3s ease, filter .3s ease;
-}
-.proj-github-icon{
-  width:28px;
-  height:28px;
-  border-radius:50%;
-  object-fit:cover;
-  filter:grayscale(.2) brightness(.9) drop-shadow(0 0 4px rgba(var(--accent-rgb),.35));
-  transition:filter .3s ease, transform .3s ease;
-}
-.proj-github:hover .proj-github-icon{
-  filter:grayscale(0) brightness(1.1) drop-shadow(0 0 8px rgba(var(--energy-rgb),.6));
-  transform:translateY(-3px) scale(1.1);
-}
-[data-theme="light"] .proj-github-icon{
-  filter:grayscale(0) brightness(1) drop-shadow(0 0 3px rgba(var(--accent-rgb),.15));
-}
-[data-theme="light"] .proj-github:hover .proj-github-icon{
-  filter:grayscale(0) brightness(1) drop-shadow(0 0 8px rgba(var(--accent-rgb),.45));
+.proj-actions .proj-link + .proj-link{
+  margin-left:24px;
+  padding-left:24px;
+  border-left:1px solid var(--line);
 }
 
 /* ---------- Tabs al hover ---------- */
@@ -267,14 +253,25 @@
   100%{ background-position:-250% 0; }
 }
 
+/* ---------- CTA proyectos ---------- */
+.proj-cta{
+  margin-top:42px;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width:768px){
   .proj-section{ padding-top:55px; padding-bottom:55px; }
   .proj-heading{ margin-bottom:30px; }
   .proj-body{ padding:16px 16px 18px; }
+  .proj-cta{ margin-top:30px; }
 }
 @media (max-width:480px){
   .proj-desc{ font-size:12.5px; }
+  .proj-link{ font-size:11.5px; }
+  .proj-actions .proj-link + .proj-link{
+    margin-left:14px;
+    padding-left:14px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce){

@@ -7,7 +7,7 @@
     radial-gradient(circle at 85% 15%, rgba(var(--accent-rgb),.08), transparent 45%),
     radial-gradient(circle at 15% 85%, rgba(var(--accent-2-rgb),.06), transparent 45%),
     var(--color-bg-mid);
-  padding:var(--space-section) 0;
+  padding:calc(var(--space-section) * 0.65) 0;
 }
 
 .about-title{
