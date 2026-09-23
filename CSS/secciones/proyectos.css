@@ -253,17 +253,11 @@
   100%{ background-position:-250% 0; }
 }
 
-/* ---------- CTA proyectos ---------- */
-.proj-cta{
-  margin-top:42px;
-}
-
 /* ---------- Responsive ---------- */
 @media (max-width:768px){
   .proj-section{ padding-top:55px; padding-bottom:55px; }
   .proj-heading{ margin-bottom:30px; }
   .proj-body{ padding:16px 16px 18px; }
-  .proj-cta{ margin-top:30px; }
 }
 @media (max-width:480px){
   .proj-desc{ font-size:12.5px; }
