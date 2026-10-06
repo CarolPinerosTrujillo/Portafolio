@@ -38,7 +38,7 @@ Python · Power BI
 ### AgendaPets
 Booking management for a dog grooming salon. Appointments, clients, and schedule availability with Java, Spring Boot, and PostgreSQL.
 **Stack:** Java · Spring Boot · PostgreSQL · JavaScript · HTML · CSS · Bootstrap · Git · GitHub
-[Live Demo](https://agenda-pets-pi.vercel.app/) · [Source](https://github.com/AgendaPets)
+[Live Demo](https://agendapets1.vercel.app/) · [Source](https://github.com/CarolPinerosTrujillo/AgendaPets)
 
 ### Coworking API
 REST API for managing coworking spaces. Allows managing locations, categories, and workspaces with full CRUD operations.
