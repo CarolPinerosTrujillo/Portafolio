@@ -40,6 +40,11 @@ Booking management for a dog grooming salon. Appointments, clients, and schedule
 **Stack:** Java · Spring Boot · PostgreSQL · JavaScript · HTML · CSS · Bootstrap · Git · GitHub
 [Live Demo](https://agendapets1.vercel.app/) · [Source](https://github.com/CarolPinerosTrujillo/AgendaPets)
 
+### Waste to Energy Project
+Platform for converting organic and inorganic waste into energy. Management of collection, transformation and monitoring with a sustainable approach.
+**Stack:** Java · Spring Boot · PostgreSQL · JavaScript · HTML · CSS · Bootstrap · Git · GitHub
+[Source](https://github.com/CarolPinerosTrujillo/WasteTOEnergyProject)
+
 ### Coworking API
 REST API for managing coworking spaces. Allows managing locations, categories, and workspaces with full CRUD operations.
 **Stack:** Java · Spring Boot · PostgreSQL · JavaScript · HTML · CSS · Git · GitHub
