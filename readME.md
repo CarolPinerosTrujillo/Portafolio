@@ -41,8 +41,8 @@ Booking management for a dog grooming salon. Appointments, clients, and schedule
 [Live Demo](https://agendapets1.vercel.app/) · [Source](https://github.com/CarolPinerosTrujillo/AgendaPets)
 
 ### Waste to Energy Project
-Platform for converting organic and inorganic waste into energy. Management of collection, transformation and monitoring with a sustainable approach.
-**Stack:** Java · Spring Boot · PostgreSQL · JavaScript · HTML · CSS · Bootstrap · Git · GitHub
+Web tool that estimates the energy potential of residual biomass (agricultural, livestock, municipal solid waste and its organic fraction) and sizes distributed generation centers — recommended technology and number of plants — for Colombia's Non-Interconnected Zones (ZNI).
+**Stack:**  Python · Django · SQLite · JavaScript · HTML · CSS · Gunicorn · WhiteNoise · GitHub Actions · Render
 [Source](https://github.com/CarolPinerosTrujillo/WasteTOEnergyProject)
 
 ### Coworking API
