@@ -43,7 +43,7 @@ Booking management for a dog grooming salon. Appointments, clients, and schedule
 ### Waste to Energy Project
 Web tool that estimates the energy potential of residual biomass (agricultural, livestock, municipal solid waste and its organic fraction) and sizes distributed generation centers — recommended technology and number of plants — for Colombia's Non-Interconnected Zones (ZNI).
 **Stack:**  Python · Django · SQLite · JavaScript · HTML · CSS · Gunicorn · WhiteNoise · GitHub Actions · Render
-[Source](https://github.com/CarolPinerosTrujillo/WasteTOEnergyProject)
+[Live Demo] (https://carolpinerostrujillo.github.io/WasteTOEnergyProject/) · [Source](https://github.com/CarolPinerosTrujillo/WasteTOEnergyProject)  
 
 ### Coworking API
 REST API for managing coworking spaces. Allows managing locations, categories, and workspaces with full CRUD operations.
